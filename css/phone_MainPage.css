@@ -277,7 +277,7 @@ span:nth-of-type(7) i {
 
 
 #accountBox {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 8rem;
 	bottom: 0px;
@@ -611,13 +611,15 @@ span:nth-of-type(7) i {
 	display: flex;
 	justify-content: center;
 	position: absolute;
-	right: 0;
+	right: 2%;
 	border-left: 2px white solid;
 	border-image: -webkit-linear-gradient(#000, #000, #000, #888888, #000, #000, #000) 40 40;
 	z-index: -1;
 }
 
 #bottomLogo {
+	width: 210%;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
