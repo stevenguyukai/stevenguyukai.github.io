@@ -21,7 +21,7 @@ body {
 	height: 20vh;
 	position: absolute;
 	top: 80vh;
-	background-color: red;
+	background-color: black;
 	overflow: hidden;
 	opacity: 0.5;
 	--progress: -1;
