@@ -1,21 +1,28 @@
-name: Build and Deploy
-on: [push]
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - master  # Set this to your default branch
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v2
-    - name: Use Node.js
+
+    - name: Set up Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
-    - name: Install and Build
-      run: |
-        npm install
-        npm run build
-    - name: Deploy
+        node-version: '18'  # Set this to the Node.js version you're using
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_branch: gh-pages  # The branch the action should deploy to
+        publish_dir: ./  # The directory to deploy, set this to your static files directory or root if you're deploying the whole app
