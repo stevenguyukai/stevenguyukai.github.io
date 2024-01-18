@@ -25,4 +25,4 @@ jobs:
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_branch: gh-pages  # The branch the action should deploy to
-        publish_dir: ./  # The directory to deploy, set this to your static files directory or root if you're deploying the whole app
+        publish_dir: ./public  # The directory to deploy, set this to your static files directory or root if you're deploying the whole app
