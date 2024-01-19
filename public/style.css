@@ -84,6 +84,14 @@ body {
 	z-index: 5;
 }
 
+@media (max-width: 850px) {
+	#homeDescription{
+		height: 60%;
+		width: 92%;
+		z-index: 5;
+	}
+}
+
 .white {
 	color: var(--main-white);
 }
@@ -98,6 +106,15 @@ body {
 	font-weight: 800;
 	font-family: 'Nunito', sans-serif;
 	letter-spacing: 4px;
+}
+@media (max-width: 850px) {
+	#greetingText {
+		position: relative;
+		font-size: 8vw;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 4px;
+	}
 }
 
 #personalDescriptionText {
@@ -144,18 +161,18 @@ body {
 	right: 8%;
 	filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
 	z-index: 2;
-	opacity: 0.7;
+	opacity: 1;
   }
   .triangle::after {
     content: '';
     position: absolute;
-    top: 4vw; /* 稍大于三角形的高度，创造厚度效果 */
-    left: -13.8vw; /* 保证偏移量让镂空三角形居中 */
+    top: 4vw; 
+    left: -13.8vw; 
     width: 0;
     height: 0;
-    border-left: 13.8vw solid transparent; /* 半个底边长加上发光厚度 */
-    border-right: 13.8vw solid transparent; /* 半个底边长加上发光厚度 */
-    border-bottom: 24vw solid #0D1D2D; /* 底边长 35% 加上发光厚度的高度 */
+    border-left: 13.8vw solid transparent; 
+    border-right: 13.8vw solid transparent; 
+    border-bottom: 24vw solid #0D1D2D;
 	z-index: 1;
   }
 
@@ -176,21 +193,21 @@ body {
 		border-bottom: 60vw solid #52b4ED;
 		position: absolute;
 		top: 19.2vh;
-		right: 8%;
+		right: 12%;
 		filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
 		z-index: 2;
-		opacity: 0.5;
+		opacity: 1;
 	  }
 	  .triangle::after {
 		content: '';
 		position: absolute;
-		top: 8vw; /* 稍大于三角形的高度，创造厚度效果 */
-		left: -27.6vw; /* 保证偏移量让镂空三角形居中 */
+		top: 8vw;
+		left: -27.6vw;
 		width: 0;
 		height: 0;
-		border-left: 27.6vw solid transparent; /* 半个底边长加上发光厚度 */
-		border-right: 27.6vw solid transparent; /* 半个底边长加上发光厚度 */
-		border-bottom: 48vw solid #0D1D2D; /* 底边长 35% 加上发光厚度的高度 */
+		border-left: 27.6vw solid transparent;
+		border-right: 27.6vw solid transparent; 
+		border-bottom: 48vw solid #0D1D2D;
 		z-index: 1;
 	  }
 }
