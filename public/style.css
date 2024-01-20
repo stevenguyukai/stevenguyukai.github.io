@@ -5,6 +5,10 @@
 	--main-white: #EEEFF2;
 }
 
+a {
+	text-decoration: none;
+}
+
 body {
 	margin: 0;
 	overflow: hidden;
@@ -167,7 +171,7 @@ body {
     border-bottom: 30vw solid #52b4ED;
     position: relative;
 	filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
-	z-index: 5;
+	z-index: 2;
 	opacity: 1;
   }
   .triangle::after {
