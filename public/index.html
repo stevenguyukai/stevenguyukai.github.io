@@ -24,45 +24,88 @@
 			<!-- Navigate Items -->
 			<div id="itemBox">
 				<!-- Home -->
-				<a id="home" onclick="homeBtn()">
-					<span class="navItems" id="homeLink">
+				<a class="home" onclick="homeBtn()">
+					<span class="navItems" class="homeLink">
 						Home
 					</span>
 				</a>
 				<!-- About -->
-				<a id="about" onclick="aboutBtn()">
-					<span class="navItems" id="aboutLink">
+				<a class="about" onclick="aboutBtn()">
+					<span class="navItems" class="aboutLink">
 						About
 					</span>
 				</a>
 				<!-- Education -->
-				<a id="education" onclick="educationBtn()">
-					<span class="navItems" id="educationLink">
+				<a class="education" onclick="educationBtn()">
+					<span class="navItems" class="educationLink">
 						Education
 					</span>
 				</a>
 				<!-- Skills -->
-				<a id="skills" onclick="skillsBtn()">
-					<span class="navItems" id="skillsLink">
+				<a class="skills" onclick="skillsBtn()">
+					<span class="navItems" class="skillsLink">
 						Skills
 					</span>
 				</a>
 				<!-- Contact -->
-				<a id="contact" onclick="contactBtn()">
-					<span class="navItems" id="contactLink">
+				<a class="contact" onclick="contactBtn()">
+					<span class="navItems" class="contactLink">
 						Contact
 					</span>
 				</a>
 			</div>
+
+
+
+			<!-- Navigate Items for Mobile-->		
+			<div id="extentButton">
+				<img src="img/extend.svg" id="extentButtonPic1" onclick="extend()">
+				<img src="img/cross.svg" id="extentButtonPic2" onclick="closeExtend()">
+			</div>
 		</nav>
+
+		<div id="extentBoxBackground" onclick="closeExtend()">
+			<br>
+			<!-- Home -->
+			<a class="home" onclick="homeBtn()">
+				<span class="navItemsMobile" class="homeLink">
+					Home
+				</span>
+			</a>
+			<!-- About -->
+			<a class="about" onclick="aboutBtn()">
+				<span class="navItemsMobile" class="aboutLink">
+					About
+				</span>
+			</a>
+			<!-- Education -->
+			<a class="education" onclick="educationBtn()">
+				<span class="navItemsMobile" class="educationLink">
+					Education
+				</span>
+			</a>
+			<!-- Skills -->
+			<a class="skills" onclick="skillsBtn()">
+				<span class="navItemsMobile" class="skillsLink">
+					Skills
+				</span>
+			</a>
+			<!-- Contact -->
+			<a class="contact" onclick="contactBtn()">
+				<span class="navItemsMobile" class="contactLink">
+					Contact
+				</span>
+			</a>
+			<br>
+			<br>
+		</div>
 
 		<!-- Home -->
 		<div id="homeArea">
 			<div id="homeDescription">
 				<div class="white" id="greetingText">
-					Hi👋 I'm Yukai Gu
-				</div>
-				<div>
+					Hi👋 I'm <br id="nameSparation">Yukai Gu
+				<br>
 					<span class="white" id="personalDescriptionText">
 						A&nbsp;
 					</span>
@@ -73,12 +116,18 @@
 				<div class="white" id="homeFullDescription">
 					I am a Chinese International Student now learning CS at UC Irvine. I am a fan of learning cool techniques like Artificial Intenlligence and computer vision. 
 				</div>
+				<br>
+				<br>
 			</div>
 			<!-- Picture of me -->
-			<div class="triangle">
-				<img src="img/me.png" id="mePic">
+			<div id="selfPictureArea">
+				<div class="triangle">
+					<img src="img/me.png" id="mePic">
+				</div>
 			</div>
 		</div>
+
+		<!-- <a href="PRO_Website/index.html">asdasdjahsfoiahs</a> -->
 	<!--
 		益脑游戏元素
 		<div id="secondScene">
