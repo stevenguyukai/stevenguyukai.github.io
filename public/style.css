@@ -7,6 +7,7 @@
 
 body {
 	margin: 0;
+	overflow: hidden;
 }
 
 
@@ -26,22 +27,35 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 10;
 	overflow: hidden;
-	/* display: flex;
-	display: -webkit-flex;
-	/* Safari */
-	/* align-items: center; */ 
+
+	display: flex;
+	align-items: center;
+	flex-flow: row;
+
+	/* background-color: red; */
 }
 
 #headName {
 	color: var(--main-white);
-	margin-top: 2vh;
-	margin-left: 8%; 
+	margin-left: 2vw; 
 	font-size: 4vh;
 	font-weight: 800;
 	font-family: 'Nunito', sans-serif;
 	letter-spacing: 2px;
+	white-space: nowrap;
+}
+
+@media (max-aspect-ratio: 1) {
+	#headName {
+		color: var(--main-white);
+		margin-left: 4vw; 
+		font-size: 3vh;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 2px;
+	}
 }
 
 #itemBox {
@@ -56,12 +70,74 @@ body {
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	justify-content: space-between;
+}
+
+#extentButton {
+    display: none;
+}
+
+#extentBoxBackground {
+	display: none;
+}
+
+
+@media (max-aspect-ratio: 1) {
+    .navItems {
+        display: none;
+    }
+    #extentButton {
+        display: block;
+		height: 5vh;
+		width: 5vh;
+		top: 1.3vh;
+		position: fixed;
+		right: 4vw;
+    }
+
+	#extentButtonPic1 {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 1;
+		z-index: 3;
+	}
+
+	#extentButtonPic2 {
+		width: 60%; 
+		height: 60%; 
+		left: 20%;
+		top: 20%;
+		position: absolute;
+		opacity: 0;
+		z-index: 2;
+	}
+
+	#extentBoxBackground {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		overflow: hidden;
+		top: 0vh;
+		z-index: 8;
+		background: rgba(15, 15, 15, 0.70);
+		backdrop-filter: blur(40.0px);
+		-webkit-backdrop-filter: blur(40.0px);
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		color: #EEEFF2;
+		font-size: 3vh;
+	}
+
+	#navItemsMobile {
+		position: relative;
+	}
 }
 
 .navItems {
 	color: var(--main-white);
-	margin-top: 2vh;
 	font-size: 2vh;
 	font-family: 'Nunito', sans-serif;
 	letter-spacing: 1px;
@@ -82,13 +158,32 @@ body {
 	height: 60%;
     width: 60%;
 	z-index: 5;
+	display: flex;
+    justify-content: center;
+	flex-direction: column; 
 }
 
-@media (max-width: 850px) {
+@media (max-aspect-ratio: 1) {
 	#homeDescription{
 		height: 60%;
 		width: 92%;
 		z-index: 5;
+		order: 2;
+		display: flex;
+		justify-content: center;
+		flex-direction: column; 
+	}
+
+	#homeArea {
+		position: relative;
+		left: 5%;
+		top: 8vh;
+		height: 80vh;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center; 
+		justify-content: space-evenly; 
 	}
 }
 
@@ -107,15 +202,6 @@ body {
 	font-family: 'Nunito', sans-serif;
 	letter-spacing: 4px;
 }
-@media (max-width: 850px) {
-	#greetingText {
-		position: relative;
-		font-size: 8vw;
-		font-weight: 800;
-		font-family: 'Nunito', sans-serif;
-		letter-spacing: 4px;
-	}
-}
 
 #personalDescriptionText {
 	position: relative;
@@ -133,6 +219,10 @@ body {
 	letter-spacing: 3px;
 }
 
+#nameSparation {
+	display: none;
+}
+
 #homeFullDescription {
 	position: relative;
 	font-size: 2vw;
@@ -142,11 +232,50 @@ body {
 	top: 2vh;
 }
 
+@media (max-aspect-ratio: 1) {
+	#greetingText {
+		position: relative;
+		font-size: 10vw;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 4px;
+	}
+
+	#personalDescriptionText {
+		position: relative;
+		font-size: 6.5vw;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 3px;
+	}
+	
+	#personalDescription {
+		position: relative;
+		font-size: 7vw;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 3px;
+	}
+
+	#nameSparation {
+		display: block;
+	}
+
+	#homeFullDescription {
+		position: relative;
+		font-size: 4vw;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 2px;
+		top: 2vh;
+	}
+}
+
 #mePic{
 	position: absolute;
 	width: 24vw;
 	left: -12vw;
-	top: 3.5vw;
+	top: 3.4vw;
 	z-index: 3;
 }
 
@@ -156,17 +285,15 @@ body {
     border-left: 18vw solid transparent; 
     border-right: 18vw solid transparent;
     border-bottom: 30vw solid #52b4ED;
-    position: absolute;
-	top: 19.2vh;
-	right: 8%;
+    position: relative;
 	filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
-	z-index: 2;
+	z-index: 5;
 	opacity: 1;
   }
   .triangle::after {
     content: '';
-    position: absolute;
-    top: 4vw; 
+    position: relative;
+    top: 2.5vw; 
     left: -13.8vw; 
     width: 0;
     height: 0;
@@ -176,7 +303,27 @@ body {
 	z-index: 1;
   }
 
-  @media (max-width: 850px) {
+#selfPictureArea {
+	width: 40%;
+	height: 60vh;
+	display: flex;
+    justify-content: center;
+	flex-direction: column; 
+	position: relative;
+	right: 3vw;
+}
+
+@media (max-aspect-ratio: 1) {
+	#selfPictureArea {
+		width: 80%;
+		height: 40vh;
+		display: flex;
+		justify-content: center;
+		flex-direction: column; 
+		position: relative;
+		left: 10%;
+		order: 1;
+	}
 	#mePic{
 		position: absolute;
 		width: 48vw;
@@ -191,8 +338,7 @@ body {
 		border-left: 36vw solid transparent; 
 		border-right: 36vw solid transparent;
 		border-bottom: 60vw solid #52b4ED;
-		position: absolute;
-		top: 19.2vh;
+		position: relative;
 		right: 12%;
 		filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
 		z-index: 2;
@@ -891,3 +1037,7 @@ span:nth-of-type(7) i {
 	top: calc(60vh - 20vw - 3rem);
 	right: 5vw;
 }
+
+
+
+/* //////////////////////////////////////////////// */
