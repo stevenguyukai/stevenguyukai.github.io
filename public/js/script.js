@@ -49,3 +49,19 @@ function closeExtend(){
 		document.getElementById("extentBoxBackground").style.display = "none"
 	  }, 300);
 }
+
+function homeBtn(){
+	alert('🚧 Under construction!');
+}
+function aboutBtn(){
+	alert('🚧 Under construction!');
+}
+function educationBtn(){
+	alert('🚧 Under construction!');
+}
+function skillsBtn(){
+	alert('🚧 Under construction!');
+}
+function contactBtn(){
+	alert('🚧 Under construction!');
+}

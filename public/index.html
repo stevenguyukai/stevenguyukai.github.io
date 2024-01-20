@@ -10,6 +10,21 @@
 		<script src="js/jquery-3.5.1.min.js"></script>
 		<link rel="icon" sizes="48x48" href="img/person.png" type="image/png">
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+		<script type="module">
+			import Typed from './util/type_js/typed.js';
+
+			var stringsToType = ["College Student", "Software Enginner", "Web Developer", "Tech Enthusiast", "Programmer", "Cat Lover 🐈"];
+
+			var typed = new Typed("#personalDescription", {
+			strings: stringsToType,
+			typeSpeed: 80,
+			backSpeed: 60,
+			backDelay: 1500,
+			loop: true,
+			fadeOut: true,
+			cursorChar: '<span style="color:#52b4ED;display: inline;">_</span>',
+		});
+		</script>
 	</head>
 	<body class="background">
 
@@ -67,31 +82,31 @@
 		<div id="extentBoxBackground" onclick="closeExtend()">
 			<br>
 			<!-- Home -->
-			<a class="home" onclick="homeBtn()">
+			<a class="home" onclick="homeBtn()" style="z-index: 2;">
 				<span class="navItemsMobile" class="homeLink">
 					Home
 				</span>
 			</a>
 			<!-- About -->
-			<a class="about" onclick="aboutBtn()">
+			<a class="about" onclick="aboutBtn()" style="z-index: 2;">
 				<span class="navItemsMobile" class="aboutLink">
 					About
 				</span>
 			</a>
 			<!-- Education -->
-			<a class="education" onclick="educationBtn()">
+			<a class="education" onclick="educationBtn()" style="z-index: 2;">
 				<span class="navItemsMobile" class="educationLink">
 					Education
 				</span>
 			</a>
 			<!-- Skills -->
-			<a class="skills" onclick="skillsBtn()">
+			<a class="skills" onclick="skillsBtn()" style="z-index: 2;">
 				<span class="navItemsMobile" class="skillsLink">
 					Skills
 				</span>
 			</a>
 			<!-- Contact -->
-			<a class="contact" onclick="contactBtn()">
+			<a class="contact" onclick="contactBtn()" style="z-index: 2;">
 				<span class="navItemsMobile" class="contactLink">
 					Contact
 				</span>
@@ -110,11 +125,11 @@
 						A&nbsp;
 					</span>
 					<span class="blue" id="personalDescription">
-						College Student
+						<!-- Description -->
 					</span>
 				</div>
 				<div class="white" id="homeFullDescription">
-					I am a Chinese International Student now learning CS at UC Irvine. I am a fan of learning cool techniques like Artificial Intenlligence and computer vision. 
+					I'm a Chinese International Student studying Computer Science at UC Irvine with a passion for AI and computer vision.
 				</div>
 				<br>
 				<br>
