@@ -37,6 +37,10 @@ body {
 	display: flex;
 	align-items: center;
 	flex-flow: row;
+
+	animation-name: fadeIn;
+    animation-duration: 2s;
+	animation-timing-function: ease;
 }
 
 #headName {
@@ -114,6 +118,10 @@ body {
 	font-weight: 800;
 	font-family: 'Nunito', sans-serif;
 	letter-spacing: 4px;
+
+	animation-name: fadeIn, slideInFromBottom;
+    animation-duration: 2s, 1s;
+	animation-timing-function: ease, ease;
 }
 
 #personalDescriptionText {
@@ -143,6 +151,10 @@ body {
 	font-family: 'Nunito', sans-serif;
 	letter-spacing: 2px;
 	top: 2vh;
+
+	animation-name: fadeIn, slideInFromBottom;
+    animation-duration: 2.5s, 1.5s;
+	animation-timing-function: ease, ease;
 }
 
 #selfPictureArea {
@@ -161,6 +173,9 @@ body {
 	left: -12vw;
 	top: 3.4vw;
 	z-index: 3;
+
+	animation-name: scaleUp;
+    animation-duration: 1.5s;
 }
 
 .triangle {
@@ -173,6 +188,10 @@ body {
 	filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
 	z-index: 2;
 	opacity: 1;
+
+	animation-name: fadeIn, scaleDown;
+    animation-duration: 1.5s, 1s;
+	animation-timing-function: ease, ease;
   }
   .triangle::after {
     content: '';
@@ -195,6 +214,10 @@ body {
 	flex-direction: row;
 	justify-content: flex-start;
 	gap: 15%;
+
+	animation-name: fadeIn, slideInFromBottom;
+    animation-duration: 3s, 2s;
+	animation-timing-function: ease, ease;
 }
 
 .homeButton {
@@ -313,6 +336,10 @@ body {
 		font-weight: 800;
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 4px;
+
+		animation-name: fadeIn, slideInFromRight;
+		animation-duration: 2s, 1s;
+		animation-timing-function: ease, ease;
 	}
 
 	#personalDescriptionText {
@@ -342,6 +369,10 @@ body {
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 2px;
 		top: 2vh;
+
+		animation-name: fadeIn, slideInFromRight;
+		animation-duration: 2.5s, 1.5s;
+		animation-timing-function: ease, ease;
 	}
 
 	#selfPictureArea {
@@ -360,6 +391,9 @@ body {
 		left: -24vw;
 		top: 7vw;
 		z-index: 3;
+
+		animation-name: scaleUp;
+		animation-duration: 1.5s;
 	}
 
 	.triangle {
@@ -373,6 +407,11 @@ body {
 		filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
 		z-index: 2;
 		opacity: 1;
+
+
+	animation-name: fadeIn, scaleDown;
+    animation-duration: 1.5s, 1s;
+	animation-timing-function: ease, ease;
 	  }
 	  .triangle::after {
 		content: '';
@@ -396,7 +435,46 @@ body {
 /* ////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////// */
+/* ////////////////////////// Animation ///////////////////////////// */
 /* ////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////// */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromBottom {
+    from { transform: translateY(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideOutToRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes scaleDown {
+    from { transform: scale(2); }
+    to { transform: scale(1); }
+}
