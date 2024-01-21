@@ -187,6 +187,41 @@ body {
 	z-index: 1;
   }
 
+#homeButtonArea {
+	height: 7vh;
+	width: 80%;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 15%;
+}
+
+.homeButton {
+	width: 35%;
+	border-radius: 20px;
+	background-color: #0D1D2D;
+	border-color: #52b4ED;
+
+    font-family: 'Nunito', sans-serif;
+	letter-spacing: 1.5px;
+	font-weight: 600;
+    color: #EEEFF2;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.homeButton:hover {
+    background-color: #52b4ED;
+	color: #EEEFF2;
+    transform: scale(1.1);
+}
+
+
 @media (max-aspect-ratio: 1) {
 	#headName {
 		color: var(--main-white);
@@ -350,6 +385,10 @@ body {
 		border-right: 27.6vw solid transparent; 
 		border-bottom: 48vw solid #0D1D2D;
 		z-index: 1;
+	  }
+
+	  #homeButtonArea {
+		display: none;
 	  }
 }
 

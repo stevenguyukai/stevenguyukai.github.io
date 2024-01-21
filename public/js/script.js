@@ -53,7 +53,7 @@ function closeExtend(){
 function homeBtn(){
 	alert('🚧 Under construction!');
 }
-function aboutBtn(){
+function projectsBtn(){
 	alert('🚧 Under construction!');
 }
 function educationBtn(){

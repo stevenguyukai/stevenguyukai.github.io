@@ -44,10 +44,10 @@
 						Home
 					</span>
 				</a>
-				<!-- About -->
-				<a class="about" onclick="aboutBtn()">
-					<span class="navItems" class="aboutLink">
-						About
+				<!-- Projects -->
+				<a class="projects" onclick="projectsBtn()">
+					<span class="navItems" class="projectsLink">
+						Projects
 					</span>
 				</a>
 				<!-- Education -->
@@ -87,10 +87,10 @@
 					Home
 				</span>
 			</a>
-			<!-- About -->
-			<a class="about" onclick="aboutBtn()" style="z-index: 2;">
-				<span class="navItemsMobile" class="aboutLink">
-					About
+			<!-- Projects -->
+			<a class="projects" onclick="projectsBtn()" style="z-index: 2;">
+				<span class="navItemsMobile" class="projectsLink">
+					Projects
 				</span>
 			</a>
 			<!-- Education -->
@@ -110,6 +110,11 @@
 				<span class="navItemsMobile" class="contactLink">
 					Contact
 				</span>
+			</a>
+			<a href="./img/resume.pdf" download="YukaiGu_Resume.pdf">
+				<button class="homeButton" style="width: 100%;height: 100%;font-size: 3vh;">
+					Download CV
+				</button>
 			</a>
 			<br>
 			<br>
@@ -133,6 +138,17 @@
 				</div>
 				<br>
 				<br>
+				<br>
+				<div id="homeButtonArea">
+					<button class="homeButton" onclick="contactBtn()">
+						Contact
+					</button>
+					<a href="./img/resume.pdf" download="YukaiGu_Resume.pdf" style="width: 35%;height: 100%;">
+						<button class="homeButton" style="width: 100%;height: 100%;">
+							Download CV
+						</button>
+					</a>
+				</div>
 			</div>
 			<!-- Picture of me -->
 			<div id="selfPictureArea">
