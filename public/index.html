@@ -1,7 +1,7 @@
 <!-- <a href="PRO_Website/index.html">登 陆</a> -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Yukai Gu</title>
@@ -13,17 +13,17 @@
 		<script type="module">
 			import Typed from './util/type_js/typed.js';
 
-			var stringsToType = ["College Student", "Software Enginner", "Web Developer", "Tech Enthusiast", "Programmer", "Cat Lover 🐈"];
+			const stringsToType = ["College Student", "Software Engineer", "Web Developer", "Tech Enthusiast", "Programmer", "Cat Lover 🐈"];
 
-			var typed = new Typed("#personalDescription", {
-			strings: stringsToType,
-			typeSpeed: 80,
-			backSpeed: 60,
-			backDelay: 1500,
-			loop: true,
-			fadeOut: true,
-			cursorChar: '<span style="color:#52b4ED;display: inline;">_</span>',
-		});
+			const typed = new Typed("#personalDescription", {
+				strings: stringsToType,
+				typeSpeed: 80,
+				backSpeed: 60,
+				backDelay: 1500,
+				loop: true,
+				fadeOut: true,
+				cursorChar: '<span style="color:#52b4ED;display: inline;">_</span>',
+			});
 		</script>
 	</head>
 	<body class="background">
@@ -40,32 +40,32 @@
 			<div id="itemBox">
 				<!-- Home -->
 				<a class="home" onclick="homeBtn()">
-					<span class="navItems" class="homeLink">
+					<span class="navItems homeLink">
 						Home
 					</span>
 				</a>
 
 				<!-- Education -->
 				<a class="education" onclick="educationBtn()">
-					<span class="navItems" class="educationLink">
+					<span class="navItems educationLink">
 						Education
 					</span>
 				</a>
 				<!-- Skills -->
 				<a class="skills" onclick="skillsBtn()">
-					<span class="navItems" class="skillsLink">
+					<span class="navItems skillsLink">
 						Skills
 					</span>
 				</a>
 				<!-- Projects -->
 				<a class="projects" onclick="projectsBtn()">
-					<span class="navItems" class="projectsLink">
+					<span class="navItems projectsLink">
 						Projects
 					</span>
 				</a>
 				<!-- Contact -->
 				<a class="contact" onclick="contactBtn()">
-					<span class="navItems" class="contactLink">
+					<span class="navItems contactLink">
 						Contact
 					</span>
 				</a>
@@ -75,8 +75,8 @@
 
 			<!-- Navigate Items for Mobile-->		
 			<div id="extentButton">
-				<img src="img/extend.svg" id="extentButtonPic1" onclick="extend()">
-				<img src="img/cross.svg" id="extentButtonPic2" onclick="closeExtend()">
+				<img src="img/extend.svg" id="extentButtonPic1" onclick="extend()" alt="Expand Option Button">
+				<img src="img/cross.svg" id="extentButtonPic2" onclick="closeExtend()" alt="Close Option Button">
 			</div>
 		</nav>
 
@@ -84,31 +84,31 @@
 			<br>
 			<!-- Home -->
 			<a class="home" onclick="homeBtn()" style="z-index: 2;">
-				<span class="navItemsMobile" class="homeLink">
+				<span class="navItemsMobile homeLink">
 					Home
 				</span>
 			</a>
 			<!-- Education -->
 			<a class="education" onclick="educationBtn()" style="z-index: 2;">
-				<span class="navItemsMobile" class="educationLink">
+				<span class="navItemsMobile educationLink">
 					Education
 				</span>
 			</a>
 			<!-- Skills -->
 			<a class="skills" onclick="skillsBtn()" style="z-index: 2;">
-				<span class="navItemsMobile" class="skillsLink">
+				<span class="navItemsMobile skillsLink">
 					Skills
 				</span>
 			</a>
 			<!-- Projects -->
 			<a class="projects" onclick="projectsBtn()" style="z-index: 2;">
-				<span class="navItemsMobile" class="projectsLink">
+				<span class="navItemsMobile projectsLink">
 					Projects
 				</span>
 			</a>
 			<!-- Contact -->
 			<a class="contact" onclick="contactBtn()" style="z-index: 2;">
-				<span class="navItemsMobile" class="contactLink">
+				<span class="navItemsMobile contactLink">
 					Contact
 				</span>
 			</a>
@@ -126,7 +126,7 @@
 			<div id="homeArea">
 				<div id="homeDescription">
 					<div class="white" id="greetingText">
-						Hi👋 I'm <br id="nameSparation">Yukai Gu
+						Hi👋 I'm <br id="nameSeparation">Yukai Gu
 					<br>
 						<span class="white" id="personalDescriptionText">
 							A&nbsp;
@@ -155,7 +155,7 @@
 				<!-- Picture of me -->
 				<div id="selfPictureArea">
 					<div class="triangle">
-						<img src="img/me.png" id="mePic">
+						<img src="img/me.png" id="mePic" alt="The Picture of Yukai">
 					</div>
 				</div>
 			</div>
@@ -206,7 +206,7 @@
 			</div>
 		</div>
 
-		<!-- <a href="PRO_Website/index.html">asdasdjahsfoiahs</a> -->
+		<!-- <a href="PRO_Website/index.html">apple</a> -->
 	<!--
 		益脑游戏元素
 		<div id="secondScene">
@@ -302,8 +302,8 @@
 			</div>
 
 			<div id="logArticles">
-				<div id="miniprogramLog" onclick="miniprogramLog()">
-					<img src="img/miniprogram_log.png" class="logCover">
+				<div id="mini programLog" onclick="mini programLog()">
+					<img src="img/mini program_log.png" class="logCover">
 					<div class="logName">
 						<span class="hugeText" style="font-size: 3rem;">微信小程序</span>
 					</div>
@@ -326,10 +326,10 @@
 			<div id="bottomLinks">
 				<div id="subLinks">
 					<span style="color: #888888;position: absolute;top: -2vh;left: -10%;">友情链接：</span>
-					<a href="https://github.com/stevenguyukai/P.R.O." class="subLinksItem">Github 代码分享</a>
-					<a href="https://mattboldt.com" class="subLinksItem">Mattboldt</a>
-					<a href="https://glassmorphism.com" class="subLinksItem">Glassmorphism</a>
-					<a href="https://neumorphism.io/" class="subLinksItem">Neumorphism</a>
+					<a href="https://github.com/stevenguyukai/P.R.O." class="subLinksItem">GitHub 代码分享</a>
+					<a href="https://mattboldt.com" class="subLinksItem">Humboldt</a>
+					<a href="https://glassmorphism.com" class="subLinksItem">Glass morphism</a>
+					<a href="https://neumorphism.io/" class="subLinksItem">Neu morphism</a>
 					<a href="https://www.iconfont.cn" class="subLinksItem">Iconfont</a>
 				</div>
 				<div id="iconLinks">

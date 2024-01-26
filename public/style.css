@@ -30,7 +30,7 @@ body {
   
 
 .background {
-	font-family: "font-family: 'Georgia', serif";
+	font-family: "font-family: 'Georgia', serif", serif;
 	background-color: var(--main-dark);
 }
 
@@ -154,7 +154,7 @@ body {
 	letter-spacing: 3px;
 }
 
-#nameSparation {
+#nameSeparation {
 	display: none;
 }
 
@@ -241,7 +241,7 @@ body {
 	border-color: #52b4ED;
 
     font-family: 'Nunito', sans-serif;
-	letter-spacing: 1.5px;
+	letter-spacing: 2px;
 	font-weight: 600;
     color: #EEEFF2;
     text-align: center;
@@ -290,7 +290,7 @@ body {
 .graduateText1 {
 	font-family: 'Nunito', sans-serif;
 	font-size: 2vw;
-	letter-spacing: 1.5px;
+	letter-spacing: 2px;
 	font-weight: 600;
     color: #EEEFF2;
 }
@@ -298,7 +298,7 @@ body {
 .graduateText2 {
 	font-family: 'Nunito', sans-serif;
 	font-size: 5vw;
-	letter-spacing: 1.5px;
+	letter-spacing: 2px;
 	font-weight: 800;
     color: #F7D164;;
 }
@@ -397,11 +397,11 @@ body {
 		height: 100vh;
 		position: fixed;
 		overflow: hidden;
-		top: 0vh;
+		top: 0;
 		z-index: 8;
 		background: rgba(15, 15, 15, 0.70);
-		backdrop-filter: blur(40.0px);
-		-webkit-backdrop-filter: blur(40.0px);
+		backdrop-filter: blur(40px);
+		-webkit-backdrop-filter: blur(40px);
 		display: none;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -468,7 +468,7 @@ body {
 		letter-spacing: 3px;
 	}
 
-	#nameSparation {
+	#nameSeparation {
 		display: block;
 	}
 
@@ -564,7 +564,7 @@ body {
 	.graduateText1 {
 		font-family: 'Nunito', sans-serif;
 		font-size: 5vw;
-		letter-spacing: 1.5px;
+		letter-spacing: 2px;
 		font-weight: 600;
 		color: #EEEFF2;
 	}
@@ -572,7 +572,7 @@ body {
 	.graduateText2 {
 		font-family: 'Nunito', sans-serif;
 		font-size: 8vw;
-		letter-spacing: 1.5px;
+		letter-spacing: 2px;
 		font-weight: 800;
 		color: #F7D164;;
 	}
