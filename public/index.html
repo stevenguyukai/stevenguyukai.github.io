@@ -44,12 +44,7 @@
 						Home
 					</span>
 				</a>
-				<!-- Projects -->
-				<a class="projects" onclick="projectsBtn()">
-					<span class="navItems" class="projectsLink">
-						Projects
-					</span>
-				</a>
+
 				<!-- Education -->
 				<a class="education" onclick="educationBtn()">
 					<span class="navItems" class="educationLink">
@@ -60,6 +55,12 @@
 				<a class="skills" onclick="skillsBtn()">
 					<span class="navItems" class="skillsLink">
 						Skills
+					</span>
+				</a>
+				<!-- Projects -->
+				<a class="projects" onclick="projectsBtn()">
+					<span class="navItems" class="projectsLink">
+						Projects
 					</span>
 				</a>
 				<!-- Contact -->
@@ -87,12 +88,6 @@
 					Home
 				</span>
 			</a>
-			<!-- Projects -->
-			<a class="projects" onclick="projectsBtn()" style="z-index: 2;">
-				<span class="navItemsMobile" class="projectsLink">
-					Projects
-				</span>
-			</a>
 			<!-- Education -->
 			<a class="education" onclick="educationBtn()" style="z-index: 2;">
 				<span class="navItemsMobile" class="educationLink">
@@ -103,6 +98,12 @@
 			<a class="skills" onclick="skillsBtn()" style="z-index: 2;">
 				<span class="navItemsMobile" class="skillsLink">
 					Skills
+				</span>
+			</a>
+			<!-- Projects -->
+			<a class="projects" onclick="projectsBtn()" style="z-index: 2;">
+				<span class="navItemsMobile" class="projectsLink">
+					Projects
 				</span>
 			</a>
 			<!-- Contact -->
@@ -121,39 +122,86 @@
 		</div>
 
 		<!-- Home -->
-		<div id="homeArea">
-			<div id="homeDescription">
-				<div class="white" id="greetingText">
-					Hi👋 I'm <br id="nameSparation">Yukai Gu
-				<br>
-					<span class="white" id="personalDescriptionText">
-						A&nbsp;
-					</span>
-					<span class="blue" id="personalDescription">
-						<!-- Description -->
-					</span>
-				</div>
-				<div class="white" id="homeFullDescription">
-					I'm a Chinese International Student studying Computer Science at UC Irvine with a passion for AI and computer vision.
-				</div>
-				<br>
-				<br>
-				<br>
-				<div id="homeButtonArea">
-					<button class="homeButton" onclick="contactBtn()">
-						Contact
-					</button>
-					<a href="./img/resume.pdf" download="YukaiGu_Resume.pdf" style="width: 35%;height: 100%;">
-						<button class="homeButton" style="width: 100%;height: 100%;">
-							Download CV
+		<div id="wholeContent">
+			<div id="homeArea">
+				<div id="homeDescription">
+					<div class="white" id="greetingText">
+						Hi👋 I'm <br id="nameSparation">Yukai Gu
+					<br>
+						<span class="white" id="personalDescriptionText">
+							A&nbsp;
+						</span>
+						<span class="blue" id="personalDescription">
+							<!-- Description -->
+						</span>
+					</div>
+					<div class="white" id="homeFullDescription">
+						I'm a Chinese International Student studying Computer Science at UC Irvine with a passion for AI and computer vision.
+					</div>
+					<br>
+					<br>
+					<br>
+					<div id="homeButtonArea">
+						<button class="homeButton" onclick="contactBtn()">
+							Contact
 						</button>
-					</a>
+						<a href="./img/resume.pdf" download="YukaiGu_Resume.pdf" style="width: 35%;height: 100%;">
+							<button class="homeButton" style="width: 100%;height: 100%;">
+								Download CV
+							</button>
+						</a>
+					</div>
+				</div>
+				<!-- Picture of me -->
+				<div id="selfPictureArea">
+					<div class="triangle">
+						<img src="img/me.png" id="mePic">
+					</div>
 				</div>
 			</div>
-			<!-- Picture of me -->
-			<div id="selfPictureArea">
-				<div class="triangle">
-					<img src="img/me.png" id="mePic">
+
+			<!-- Education -->
+			<div id="educationArea">
+				<span id="educationText">
+					Education
+				</span>
+
+				<div id="educationBox">
+					<img src="./img/uci.svg" alt="UC, Irvine" class="uciLogo">
+					<div>
+						<span class="graduateText1">
+							Expected Graduate:<span class="breakGap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</span>
+						<br>
+						<span class="graduateText2">
+							June / 2025 <span class="breakGap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</span>
+					</div>
+				</div>
+
+				<div id="majorBox">
+					<img src="./img/icsLogo.svg" alt="ICS" class="uciLogo">
+					<div>
+						<span class="graduateText1">
+							Specialization:<span class="breakGap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</span>
+						<br>
+						<span class="graduateText2" id="csMajor">
+							CS
+							<span class="breakGap">/</span>
+							<br class="mobileOnly">
+							Intelligent Systems
+						</span>
+					</div>
+					<div>
+						<span class="graduateText1">
+							Total GPA:<span class="breakGap">&nbsp;&nbsp;&nbsp;</span>
+						</span>
+						<br class="mobileOnly">
+						<span class="graduateText2" style="font-size: 7vw;color: #F7D164;">
+							3.93 / 4
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
