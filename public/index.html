@@ -51,16 +51,16 @@
 						Education
 					</span>
 				</a>
-				<!-- Skills -->
-				<a class="skills" onclick="skillsBtn()">
-					<span class="navItems skillsLink">
-						Skills
-					</span>
-				</a>
 				<!-- Projects -->
 				<a class="projects" onclick="projectsBtn()">
 					<span class="navItems projectsLink">
 						Projects
+					</span>
+				</a>
+				<!-- Course -->
+				<a class="course" onclick="courseBtn()">
+					<span class="navItems skillsLink">
+						Course
 					</span>
 				</a>
 				<!-- Contact -->
@@ -94,16 +94,16 @@
 					Education
 				</span>
 			</a>
-			<!-- Skills -->
-			<a class="skills" onclick="skillsBtn()" style="z-index: 2;">
-				<span class="navItemsMobile skillsLink">
-					Skills
-				</span>
-			</a>
 			<!-- Projects -->
 			<a class="projects" onclick="projectsBtn()" style="z-index: 2;">
 				<span class="navItemsMobile projectsLink">
 					Projects
+				</span>
+			</a>
+			<!-- Course -->
+			<a class="course" onclick="courseBtn()" style="z-index: 2;">
+				<span class="navItemsMobile skillsLink">
+					Course
 				</span>
 			</a>
 			<!-- Contact -->
@@ -121,8 +121,8 @@
 			<br>
 		</div>
 
-		<!-- Home -->
 		<div id="wholeContent">
+			<!-- Home -->
 			<div id="homeArea">
 				<div id="homeDescription">
 					<div class="white" id="greetingText">
@@ -204,152 +204,39 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- <a href="PRO_Website/index.html">apple</a> -->
-	<!--
-		益脑游戏元素
-		<div id="secondScene">
-			<video id="brainGameVideo" src="img/brainGame.mp4" autoplay="autoplay" muted="muted" data-video-name="introBrainGame"
-			 onclick="hideQrCode()"></video>
-			<div id="qrCodeBox">
-				<img src="img/qrCode.png" id="qrCode">
-			</div>
-			<div id="gameIntro">
-				<span class="hugeText" style="color: #FF7818;"><a class="secondText">益 脑 游 戏</a></span>
-				<br>
-				<div class="hugeText" style="color: white;"><a class="secondText">一 个 <mark class="secondMark">事 捷 功 倍</mark> 的</a></div>
-				<br>
-				<span class="hugeText" style="color: white;"><a class="secondText">神 器</a></span>
-				<br>
-				<br>
-				<p class="littleText">
-					<span><a class="secondText">我 们 设 计 了 一 款 可 以 随 时 随 地</a></span>
-					<br>
-					<span><a class="secondText">训 练 大 脑 的 软 件 </a></span>
-					<br>
-					<span class="littleText" style="color: #FF7818;"><a class="secondText">「 暂 只 在 微 信 小 程 序 上 线 」</a></span>
-				</p>
-				<br>
-				<button type="button" onclick="startBrainGame()" id="startBrainGame" class="secondText">进 入 训 练</button>
-			</div>
-		</div>
-
-		新的知识元素 
-		<div id="thirdScene">
-			<span class="hugeText" style="color: white;"><a class="thirdText">稍 微 <mark class="thirdMark">了 解</mark> 一 下 ?</a></span>
-			<div class="newKnowledgeCard" style="z-index: 1;" onclick="directToFirstArticle()">
-				<div class="articleImg">
-					<img src="img/article_img_001.png" style="height: 100%;width: 100%;">
-				</div>
-				<div class="articleDetail">
-					<h1 style="color:white;font-style: normal;font-weight: normal;">解 刨 版 本 号</h1>
-				</div>
-			</div>
-			<div class="newKnowledgeCard" style="z-index: 0; right: 5vw;margin-top: 10vh;" onclick="directToSecondArticle()">
-				<div class="articleImg">
-					<img src="img/article_img_002.png" style="height: 100%;width: 100%;">
-				</div>
-				<div class="articleDetail">
-					<h1 style="color:white;font-style: normal;font-weight: normal;">自 制 输 入 法</h1>
-				</div>
-			</div>
-			<div class="newKnowledgeCard" style="z-index: 0; left: 5vw;margin-top: 10vh;" onclick="directToThirdArticle()">
-				<div class="articleImg">
-					<img src="img/article_img_003.png" style="height: 100%;width: 100%;">
-				</div>
-				<div class="articleDetail">
-					<h1 style="color:white;font-style: normal;font-weight: normal;">了 解 一 下 新 拟 态</h1>
-				</div>
-			</div>
-			<a class="littleText" style="color: white;position: absolute;top: 90vh;">更 多 知 识 ></a>
-		</div>
-
-		开发日志元素
-		<div id="forthScene">
-			<div id="codeArea">
-				<div id="codeBackground"></div>
-				<div id="htmlBox">
-					<div class="codeTitle">H T M L</div>
-					<hr color="#888888" width="96%" style="position: relative;top: 4vh;">
-					<div class="codeArea">
-						<div id="typeStyle"></div>
+			<!-- Projects -->
+			<div id="projectsArea">
+				<span id="projectsText">
+					Latest <span style="color: #52b4ED">Projects</span>
+				</span>
+				<div id="projectBox">
+					<div class="projectCard" onclick="directToProject1()">
+						<div class="projectImg">
+							<img src="img/antalmanac.png" style="height: 100%;width: 100%;object-fit: cover;" alt="AntAlmanac">
+						</div>
+						<span class="projectTitle">AntAlmanac</span>
 					</div>
-				</div>
-				<div id="cssBox">
-					<div class="codeTitle">C S S</div>
-					<hr color="#888888" width="96%" style="position: relative;top: 4vh;">
-					<div class="codeArea">
-						<div id="typeStyle2"></div>
+					<div class="projectCard" onclick="directToProject2()">
+						<div class="projectImg">
+							<img src="img/IEEE_MM.png" style="height: 100%;width: 100%;object-fit: cover;" alt="Micro Mouse">
+						</div>
+						<span class="projectTitle">Micro Mouse</span>
 					</div>
-				</div>
-			</div>
-
-			<div id="titleArea">
-				<span class="hugeText" style="color: #FF7818;"><a class="forthText">开 发 日 志</a></span>
-				<br>
-				<span class="hugeText" style="color: white;"><a class="forthText">记 录 <mark class="forthMark">开 发</mark> 过 程</a></span>
-				<br>
-				<span class="hugeText" style="color: white;"><a class="forthText">理 解 <mark class="forthMark">B U G</mark> 原 因</a></span>
-				<br>
-				<p class="littleText">
-					<span><a class="forthText">我 们 将 每 一 天 的 编 写、学 习 代 码</a></span>
-					<br>
-					<span><a class="forthText">集 合 成 了《 开 发 日 志 》</a></span>
-					<br>
-					<span class="littleText" style="color: #FF7818;"><a class="forthText">「 这 些 内 容 将 会 持 续 更 新 」</a></span>
-				</p>
-			</div>
-
-			<div id="logArticles">
-				<div id="mini programLog" onclick="mini programLog()">
-					<img src="img/mini program_log.png" class="logCover">
-					<div class="logName">
-						<span class="hugeText" style="font-size: 3rem;">微信小程序</span>
+					<div class="projectCard" onclick="directToProject3()">
+						<div class="projectImg">
+							<img src="img/pro.png" style="height: 100%;width: 100%;object-fit: cover;" alt="PRO club">
+						</div>
+						<span class="projectTitle">P.R.O. Club</span>
 					</div>
-				</div>
-				
-				<div id="htmlLog" onclick="htmlLog()">
-					<img src="img/html_log.png" class="logCover">
-					<div class="logName">
-						<span class="hugeText" style="font-size: 3rem;">社团网页开发</span>
+					<div class="projectCard" onclick="directToProject4()">
+						<div class="projectImg">
+							<img src="img/searchEngine.png" style="height: 100%;width: 100%;object-fit: cover;" alt="Search Engine">
+						</div>
+						<span class="projectTitle">Search Engine</span>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		底部元素
-		<div id="bottomScene">
-			<div id="slogan">
-				<h1 id="sloganText">「 爱 心 美 化 生 活 ， <br>&emsp;&nbsp;科 技 改 变 世 界 。」</h1>
-			</div>
-			<div id="bottomLinks">
-				<div id="subLinks">
-					<span style="color: #888888;position: absolute;top: -2vh;left: -10%;">友情链接：</span>
-					<a href="https://github.com/stevenguyukai/P.R.O." class="subLinksItem">GitHub 代码分享</a>
-					<a href="https://mattboldt.com" class="subLinksItem">Humboldt</a>
-					<a href="https://glassmorphism.com" class="subLinksItem">Glass morphism</a>
-					<a href="https://neumorphism.io/" class="subLinksItem">Neu morphism</a>
-					<a href="https://www.iconfont.cn" class="subLinksItem">Iconfont</a>
-				</div>
-				<div id="iconLinks">
-					<img src="img/github.svg"  class="subIconLinksItem" onclick="gotoGithub()">
-					<img src="img/wechat.svg"  class="subIconLinksItem" onclick="showAlert()">
-				</div>
-			</div>
-			<img src="img/WhiteLogo.png" id="bottomLogo">
-		</div>
-		
-		提示框
-		<div id="alertBox" style="opacity: 0;z-index: -5;" onclick="hideAlert()">
-			<div id="alertContent">
-				<p id="alertTitle">「先驱者PRO」微信官方账号</p>
-				<img src="img/qrCode.png" id="alertImg1">
-				<img src="img/qrCode2.png"  id="alertImg2">
-			</div>
-		</div>
-
-	-->
-
 	</body>
 </html>
