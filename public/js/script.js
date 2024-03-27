@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			// while scrolling, the animation will be triggered
 			document.getElementById("educationBox").style.setProperty("--progress", (scrolled - 210) / 210)
 			document.getElementById("majorBox").style.setProperty("--progress", (scrolled - 210) / 210)
+		} else if (scrolled >= 420 && scrolled <= 630){
+			// This is the range from second page to third page
+			// while scrolling, the animation will be triggered
+			document.getElementById("projectBox").style.setProperty("--progress", (scrolled - 420) / 210)
 		}
 	});
 });
