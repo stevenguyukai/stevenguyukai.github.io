@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	wholeContentDiv.addEventListener('scroll', function() {
 
 		// Scrolled: [210, 420]
-		const vh = wholeContentDiv.scrollHeight / 630;
+		const vh = wholeContentDiv.scrollHeight / 840;
 		const scrolled = (wholeContentDiv.scrollTop + wholeContentDiv.clientHeight) / vh;
 		if(scrolled >= 210 && scrolled <= 420){
 			// This is the range from first page to second page
@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			// This is the range from second page to third page
 			// while scrolling, the animation will be triggered
 			document.getElementById("projectBox").style.setProperty("--progress", (scrolled - 420) / 210)
+		}  else if (scrolled >= 630 && scrolled <= 840){
+			// This is the range from third page to fourth page
+			// while scrolling, the animation will be triggered
+			let courseCards = document.querySelectorAll('#courseBox .courseCard');
+			for (let i = 0; i < courseCards.length; i++) {
+				courseCards[i].style.setProperty("--progress", (scrolled - 630) / 210)
+			}
 		}
 	});
 });
@@ -110,7 +117,7 @@ function educationBtn(){
 	smoothScrollTo(wholeContentDiv, vhToPixels(100), 1000);
 }
 function courseBtn(){
-	alert('🚧 Under construction!');
+	smoothScrollTo(wholeContentDiv, vhToPixels(300), 1000);
 }
 function contactBtn(){
 	alert('🚧 Under construction!');
