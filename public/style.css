@@ -372,11 +372,13 @@ body {
 	width: 90%;
 	height: 60%;
 	position: relative;
-	top: 15%;
+	top: 10%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	--progress: 0;
+	opacity: calc((var(--progress)));
 }
 
 #projectsText{
@@ -386,7 +388,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 	letter-spacing: 3px;
 	color: var(--main-white);
-	top: 20%;
+	top: 15%;
 }
 
 .projectCard{
@@ -397,6 +399,11 @@ body {
 	justify-content: space-evenly;
 	align-items: center;
 	overflow: hidden;
+}
+
+.projectCard:hover{
+	transform: scale(1.1);
+	transition-duration: 0.2s;
 }
 
 .projectImg{
@@ -697,7 +704,7 @@ body {
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 3px;
 		color: var(--main-white);
-		top: 20%;
+		top: 16%;
 	}
 
 	.projectCard{
@@ -708,6 +715,11 @@ body {
 		justify-content: space-evenly;
 		align-items: center;
 		overflow: hidden;
+	}
+
+	.projectCard:hover{
+		transform: scale(1.1);
+		transition-duration: 0.2s;
 	}
 
 	.projectTitle{
