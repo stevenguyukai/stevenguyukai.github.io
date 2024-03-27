@@ -263,7 +263,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	position: absolute;
-	top: 100vh;
+	top: 98vh;
 	overflow: hidden;
 }
 
@@ -390,6 +390,8 @@ body {
 	letter-spacing: 3px;
 	color: var(--main-white);
 	top: 15%;
+	--progress: 0;
+	scale: var(--progress)
 }
 
 .projectCard{
@@ -444,6 +446,8 @@ body {
 	letter-spacing: 3px;
 	color: var(--main-white);
 	top: 18%;
+	--progress: 0;
+	scale: var(--progress)
 }
 
 #courseBox{
@@ -525,7 +529,6 @@ body {
 #homeLink{
 	color: var(--main-middle);
 }
-
 #educationLink{
 	color: var(--main-white);
 }
@@ -541,6 +544,21 @@ body {
 
 
 @media (max-aspect-ratio: 1/1) {
+	#homeLinkMobile{
+		color: var(--main-middle);
+	}
+	#educationLinkMobile{
+		color: var(--main-white);
+	}
+	#projectsLinkMobile{
+		color: var(--main-white);
+	}
+	#skillsLinkMobile{
+		color: var(--main-white);
+	}
+	#contactLinkMobile{
+		color: var(--main-white);
+	}
 	#headName {
 		color: var(--main-white);
 		margin-left: 4vw; 
@@ -725,6 +743,14 @@ body {
 		display: none;
 	  }
 
+	#educationArea {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 110vh;
+		overflow: hidden;
+	}
+
 	#educationBox {
 		width: 65%;
 		height: 40%;
@@ -822,6 +848,8 @@ body {
 		letter-spacing: 3px;
 		color: var(--main-white);
 		top: 16%;
+		--progress: 0;
+		scale: var(--progress)
 	}
 
 	.projectCard{
@@ -850,7 +878,7 @@ body {
 
 	#courseArea{
 		width: 100vw;
-		height: 130vh;
+		height: 100vh;
 		position: absolute;
 		top: 300vh;
 		overflow: hidden;
@@ -863,7 +891,7 @@ body {
 
 	#courseText{
 		position: relative;
-		font-size: 10vw;
+		font-size: 8vw;
 		font-weight: 800;
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 3px;
@@ -871,6 +899,8 @@ body {
 		top: 18%;
 		margin-left: 5vw;
 		margin-right: 5vw;
+		--progress: 0;
+		scale: var(--progress)
 	}
 
 	#courseBox{
@@ -885,7 +915,7 @@ body {
 	}
 
 	.courseTitle{
-		font-size: 4vw;
+		font-size: 3vw;
 		font-weight: 800;
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 1px;
@@ -893,7 +923,7 @@ body {
 	}
 
 	.courseDescription{
-		font-size: 3vw;
+		font-size: 2.3vw;
 		font-weight: 600;
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 1px;
