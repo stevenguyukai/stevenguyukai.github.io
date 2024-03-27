@@ -7,6 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Scrolled: [210, 420]
 		const vh = wholeContentDiv.scrollHeight / 1050;
 		const scrolled = (wholeContentDiv.scrollTop + wholeContentDiv.clientHeight) / vh;
+		if (scrolled >= 105 && scrolled <= 315){
+			document.getElementById("homeLink").style.color = "#52b4ED"
+			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("contactLink").style.color = "#EEEFF2"
+		} else if (scrolled >= 315 && scrolled <= 525){
+			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("educationLink").style.color = "#52b4ED"
+			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("contactLink").style.color = "#EEEFF2"
+		} else if (scrolled >= 525 && scrolled <= 735){
+			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLink").style.color = "#52b4ED"
+			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("contactLink").style.color = "#EEEFF2"
+		} else if (scrolled >= 735 && scrolled <= 945){
+			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLink").style.color = "#52b4ED"
+			document.getElementById("contactLink").style.color = "#EEEFF2"
+		} else if (scrolled >= 945 && scrolled <= 1050){
+			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("contactLink").style.color = "#52b4ED"
+		}
 		if(scrolled >= 210 && scrolled <= 420){
 			// This is the range from first page to second page
 			// while scrolling, the animation will be triggered

@@ -522,6 +522,23 @@ body {
 	transition-duration: 0.2s;
 }
 
+#homeLink{
+	color: var(--main-middle);
+}
+
+#educationLink{
+	color: var(--main-white);
+}
+#projectsLink{
+	color: var(--main-white);
+}
+#skillsLink{
+	color: var(--main-white);
+}
+#contactLink{
+	color: var(--main-white);
+}
+
 
 @media (max-aspect-ratio: 1/1) {
 	#headName {
