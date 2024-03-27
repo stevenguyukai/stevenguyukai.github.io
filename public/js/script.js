@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	wholeContentDiv.addEventListener('scroll', function() {
 
 		// Scrolled: [210, 420]
-		const vh = wholeContentDiv.scrollHeight / 840;
+		const vh = wholeContentDiv.scrollHeight / 1050;
 		const scrolled = (wholeContentDiv.scrollTop + wholeContentDiv.clientHeight) / vh;
 		if(scrolled >= 210 && scrolled <= 420){
 			// This is the range from first page to second page
@@ -120,7 +120,7 @@ function courseBtn(){
 	smoothScrollTo(wholeContentDiv, vhToPixels(300), 1000);
 }
 function contactBtn(){
-	alert('🚧 Under construction!');
+	smoothScrollTo(wholeContentDiv, vhToPixels(400), 1000);
 }
 
 function directToProject1(){
@@ -137,4 +137,25 @@ function directToProject3(){
 
 function directToProject4(){
 	window.open("https://github.com/stevenguyukai/IR24W-A3-G42", "_blank");
+}
+
+function directToGithub() {
+	window.open("https://github.com/stevenguyukai","_blank" );
+}
+
+function directToLinkedIn(){
+	window.open("https://www.linkedin.com/in/yukai-gu-125bb3292","_blank" );
+}
+
+function directToLocation(){
+	window.open("https://maps.app.goo.gl/aGGAj2QwTjqiZqqG7","_blank" );
+
+}
+
+function directToEmail(){
+	window.open("mailto:yukaig1@uci.edu","_blank" );
+}
+
+function directToPhone(){
+	window.open("tel:9495929418","_blank" );
 }
