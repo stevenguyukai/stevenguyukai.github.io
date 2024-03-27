@@ -9,34 +9,59 @@ document.addEventListener('DOMContentLoaded', () => {
 		const scrolled = (wholeContentDiv.scrollTop + wholeContentDiv.clientHeight) / vh;
 		if (scrolled >= 105 && scrolled <= 315){
 			document.getElementById("homeLink").style.color = "#52b4ED"
+			document.getElementById("homeLinkMobile").style.color = "#52b4ED"
 			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("educationLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
+			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
 		} else if (scrolled >= 315 && scrolled <= 525){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("educationLink").style.color = "#52b4ED"
+			document.getElementById("educationLinkMobile").style.color = "#52b4ED"
 			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
+			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
 		} else if (scrolled >= 525 && scrolled <= 735){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("educationLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("projectsLink").style.color = "#52b4ED"
+			document.getElementById("projectsLinkMobile").style.color = "#52b4ED"
 			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
+			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
 		} else if (scrolled >= 735 && scrolled <= 945){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("educationLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("skillsLink").style.color = "#52b4ED"
+			document.getElementById("skillsLinkMobile").style.color = "#52b4ED"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
+			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
 		} else if (scrolled >= 945 && scrolled <= 1050){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("educationLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#52b4ED"
+			document.getElementById("contactLinkMobile").style.color = "#52b4ED"
 		}
 		if(scrolled >= 210 && scrolled <= 420){
 			// This is the range from first page to second page
@@ -47,9 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			// This is the range from second page to third page
 			// while scrolling, the animation will be triggered
 			document.getElementById("projectBox").style.setProperty("--progress", (scrolled - 420) / 210)
+			document.getElementById("projectsText").style.setProperty("--progress", (scrolled - 420) / 210)
 		}  else if (scrolled >= 630 && scrolled <= 840){
 			// This is the range from third page to fourth page
 			// while scrolling, the animation will be triggered
+			document.getElementById("courseText").style.setProperty("--progress", (scrolled - 630) / 210)
 			let courseCards = document.querySelectorAll('#courseBox .courseCard');
 			for (let i = 0; i < courseCards.length; i++) {
 				courseCards[i].style.setProperty("--progress", (scrolled - 630) / 210)
