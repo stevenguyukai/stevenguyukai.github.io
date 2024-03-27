@@ -422,6 +422,69 @@ body {
 	color: var(--main-white);
 }
 
+#courseArea{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 300vh;
+	overflow: hidden;
+	background-color: var(--main-dark);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#courseText{
+	position: relative;
+	font-size: 5vw;
+	font-weight: 800;
+	font-family: 'Nunito', sans-serif;
+	letter-spacing: 3px;
+	color: var(--main-white);
+	top: 18%;
+}
+
+#courseBox{
+	width: 90%;
+	height: 60%;
+	position: relative;
+	top: 10%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.courseCard{
+	width: 90%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	overflow: hidden;
+	--progress: 0;
+	opacity: calc(var(--progress));
+}
+
+.courseTitle{
+	font-size: 2vw;
+	font-weight: 800;
+	font-family: 'Nunito', sans-serif;
+	letter-spacing: 1px;
+	color: var(--main-white);
+}
+
+.courseDescription{
+	font-size: 1.5vw;
+	font-weight: 600;
+	font-family: 'Nunito', sans-serif;
+	letter-spacing: 1px;
+	color: #AAAAAA;
+}
+
 
 @media (max-aspect-ratio: 1/1) {
 	#headName {
@@ -729,6 +792,58 @@ body {
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 1px;
 		color: var(--main-white);
+	}
+
+	#courseArea{
+		width: 100vw;
+		height: 130vh;
+		position: absolute;
+		top: 300vh;
+		overflow: hidden;
+		background-color: var(--main-dark);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	#courseText{
+		position: relative;
+		font-size: 10vw;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 3px;
+		color: var(--main-white);
+		top: 18%;
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+
+	#courseBox{
+		width: 90%;
+		height: 60%;
+		position: relative;
+		top: 10%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.courseTitle{
+		font-size: 4vw;
+		font-weight: 800;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 1px;
+		color: var(--main-white);
+	}
+
+	.courseDescription{
+		font-size: 3vw;
+		font-weight: 600;
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 1px;
+		color: #AAAAAA;
 	}
 
 }
