@@ -198,9 +198,9 @@ body {
     height: 0;
     border-left: 18vw solid transparent; 
     border-right: 18vw solid transparent;
-    border-bottom: 30vw solid #52b4ED;
+    border-bottom: 30vw solid var(--main-middle);
     position: relative;
-	filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
+	filter: drop-shadow(0 0 8px var(--main-middle)) drop-shadow(0 0 16px var(--main-middle)) drop-shadow(0 0 24px var(--main-middle));
 	z-index: 2;
 	opacity: 1;
 
@@ -217,7 +217,7 @@ body {
     height: 0;
     border-left: 13.8vw solid transparent; 
     border-right: 13.8vw solid transparent; 
-    border-bottom: 24vw solid #0D1D2D;
+    border-bottom: 24vw solid var(--main-dark);
 	z-index: 1;
   }
 
@@ -238,13 +238,13 @@ body {
 .homeButton {
 	width: 35%;
 	border-radius: 20px;
-	background-color: #0D1D2D;
-	border-color: #52b4ED;
+	background-color: var(--main-dark);
+	border-color: var(--main-middle);
 
     font-family: 'Nunito', sans-serif;
 	letter-spacing: 2px;
 	font-weight: 600;
-    color: #EEEFF2;
+    color: var(--main-white);
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -254,8 +254,8 @@ body {
 }
 
 .homeButton:hover {
-    background-color: #52b4ED;
-	color: #EEEFF2;
+    background-color: var(--main-middle);
+	color: var(--main-white);
     transform: scale(1.1);
 }
 
@@ -294,7 +294,7 @@ body {
 	font-size: 2vw;
 	letter-spacing: 2px;
 	font-weight: 600;
-    color: #EEEFF2;
+    color: var(--main-white);
 }
 
 .graduateText2 {
@@ -328,7 +328,7 @@ body {
 }
 
 #educationText {
-	color: #EEEFF2;
+	color: var(--main-white);
 	font-size: 11vw;
 	font-weight: 800;
 	font-family: 'Nunito', sans-serif;
@@ -609,7 +609,7 @@ body {
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		color: #EEEFF2;
+		color: var(--main-white);
 		font-size: 3vh;
 	}
 
@@ -714,10 +714,10 @@ body {
 		height: 0;
 		border-left: 36vw solid transparent; 
 		border-right: 36vw solid transparent;
-		border-bottom: 60vw solid #52b4ED;
+		border-bottom: 60vw solid var(--main-middle);
 		position: relative;
 		right: 12%;
-		filter: drop-shadow(0 0 8px #52b4ED) drop-shadow(0 0 16px #52b4ED) drop-shadow(0 0 24px #52b4ED);
+		filter: drop-shadow(0 0 8px var(--main-middle)) drop-shadow(0 0 16px var(--main-middle)) drop-shadow(0 0 24px var(--main-middle));
 		z-index: 2;
 		opacity: 1;
 
@@ -735,7 +735,7 @@ body {
 		height: 0;
 		border-left: 27.6vw solid transparent;
 		border-right: 27.6vw solid transparent; 
-		border-bottom: 48vw solid #0D1D2D;
+		border-bottom: 48vw solid var(--main-dark);
 		z-index: 1;
 	  }
 
@@ -778,7 +778,7 @@ body {
 		font-size: 5vw;
 		letter-spacing: 2px;
 		font-weight: 600;
-		color: #EEEFF2;
+		color: var(--main-white);
 	}
 
 	.graduateText2 {
@@ -820,7 +820,7 @@ body {
 	}
 
 	#educationText {
-		color: #EEEFF2;
+		color: var(--main-white)var(--main-white);
 		font-size: 11vw;
 		font-weight: 800;
 		font-family: 'Nunito', sans-serif;
