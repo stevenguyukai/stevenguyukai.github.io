@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	wholeContentDiv.addEventListener('scroll', function() {
 
-		// Scrolled: [210, 420]
+
 		const vh = wholeContentDiv.scrollHeight / 1050;
 		const scrolled = (wholeContentDiv.scrollTop + wholeContentDiv.clientHeight) / vh;
+
 		if (scrolled >= 105 && scrolled <= 315){
 			document.getElementById("homeLink").style.color = "#52b4ED"
 			document.getElementById("homeLinkMobile").style.color = "#52b4ED"
