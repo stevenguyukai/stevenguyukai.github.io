@@ -198,6 +198,10 @@ function directToProject4(){
 	window.open("https://github.com/stevenguyukai/IR24W-A3-G42", "_blank");
 }
 
+function directToProject5(){
+	window.open("https://pddpdd20020105.github.io/ICS-175-Group-6-Project/index.html", "_blank");
+}
+
 function directToGithub() {
 	window.open("https://github.com/stevenguyukai","_blank" );
 }
