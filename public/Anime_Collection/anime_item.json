@@ -1,0 +1,52 @@
+[
+  {
+    "itemID": "F5F1D0BA-1111-4444-AAAA-111111111111",
+    "releaseDate": "2025-03-28",
+    "type": "徽章",
+    "material": "马口铁",
+    "image": "https://example.com/images/badge_vol2.jpg",
+    "size": "约75mm",
+    "price": "¥660(税込)/个",
+    "company": "jumpshop",
+    "obtainMethod": "单领；通贩",
+    "officialLink": "https://jumpshop-online.com/collections/jsol20250328-ky",
+    "character": "灶门炭治郎；灶门祢豆子；我妻善逸；嘴平伊之助；栗花落香奈乎；蝴蝶忍；炼狱杏寿郎；宇髄天元；甘露寺蜜璃；时透无一郎；悲鸣屿行冥；伊黑小芭内；不死川实弥",
+    "note": "Jumpshop限定",
+    "anime": {
+      "animeID": "DEMONSLAYER",
+      "name_en": "Demon Slayer",
+      "name_cn": "鬼灭之刃",
+      "name_jp": "鬼滅の刃"
+    },
+    "multilingualNames": [
+      { "language": "cn", "productName": "JS限定闪吧唧Vol.2" },
+      { "language": "jp", "productName": "鬼滅の刃 グリッター缶バッジ Vol.2" },
+      { "language": "en", "productName": "Glitter Badge Vol.2" }
+    ]
+  },
+  {
+    "itemID": "F5F1D0BA-2222-4444-BBBB-222222222222",
+    "releaseDate": "2025-03-26",
+    "type": "桌垫",
+    "material": "纸",
+    "image": "https://example.com/images/mat_sanemi.jpg",
+    "size": "约297x420mm",
+    "price": "暂无",
+    "company": "ufotable",
+    "obtainMethod": "来店特典：柱Cafe",
+    "officialLink": "https://www.ufotable.com/dining/kmt_dining/",
+    "character": "不死川实弥",
+    "note": "",
+    "anime": {
+      "animeID": "DEMONSLAYER",
+      "name_en": "Demon Slayer",
+      "name_cn": "鬼灭之刃",
+      "name_jp": "鬼滅の刃"
+    },
+    "multilingualNames": [
+      { "language": "cn", "productName": "柱DINING 不死川桌垫" },
+      { "language": "jp", "productName": "柱稽古編 ダイニング 不死川実弥" },
+      { "language": "en", "productName": "Sanemi Dining Mat" }
+    ]
+  }
+]
