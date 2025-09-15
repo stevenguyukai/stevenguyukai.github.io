@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}  else if (scrolled >= 630 && scrolled <= 840){
 			// This is the range from third page to fourth page
 			// while scrolling, the animation will be triggered
-			document.getElementById("courseText").style.setProperty("--progress", (scrolled - 630) / 210)
+			document.getElementById("workText").style.setProperty("--progress", (scrolled - 630) / 210)
 			let courseCards = document.querySelectorAll('#courseBox .courseCard');
 			for (let i = 0; i < courseCards.length; i++) {
 				courseCards[i].style.setProperty("--progress", (scrolled - 630) / 210)
@@ -175,7 +175,7 @@ function projectsBtn(){
 function educationBtn(){
 	smoothScrollTo(wholeContentDiv, vhToPixels(100), 1000);
 }
-function courseBtn(){
+function workBtn(){
 	smoothScrollTo(wholeContentDiv, vhToPixels(300), 1000);
 }
 function contactBtn(){
@@ -222,3 +222,22 @@ function directToEmail(){
 function directToPhone(){
 	window.open("tel:9495929418","_blank" );
 }
+
+function openResumeModal() {
+	document.getElementById('resumeModalOverlay').style.display = 'block';
+	document.body.style.overflow = 'hidden';
+}
+function closeResumeModal() {
+	document.getElementById('resumeModalOverlay').style.display = 'none';
+	document.body.style.overflow = '';
+}
+function overlayClick(e) {
+	// Close only when clicking the dimmed area, not the modal itself
+	if (e.target && e.target.id === 'resumeModalOverlay') {
+		closeResumeModal();
+	}
+}
+// Close on Escape key
+document.addEventListener('keydown', function(e){
+	if (e.key === 'Escape') closeResumeModal();
+});

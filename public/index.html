@@ -57,10 +57,10 @@
 						Projects
 					</span>
 				</a>
-				<!-- Course -->
-				<a class="course" onclick="courseBtn()">
+				<!-- Work -->
+				<a class="work" onclick="workBtn()">
 					<span class="navItems" id="skillsLink">
-						Course
+						Work
 					</span>
 				</a>
 				<!-- Contact -->
@@ -100,10 +100,10 @@
 					Projects
 				</span>
 			</a>
-			<!-- Course -->
-			<a class="course" onclick="courseBtn()" style="z-index: 2;">
+			<!-- Work -->
+			<a class="work" onclick="workBtn()" style="z-index: 2;">
 				<span class="navItemsMobile"  id="skillsLinkMobile">
-					Course
+					Work
 				</span>
 			</a>
 			<!-- Contact -->
@@ -245,36 +245,33 @@
 					</div>
 				</div>
 			</div>
-			<!-- Course -->
-			<div>
-				<div id="courseArea">
-					<span id="courseText">
-						Advanced <span style="color: #52b4ED">Courses</span> I've Taken
-					</span>
-					<div id="courseBox">
-						<div class="courseCard">
-							<span class="courseTitle">I&C SCI 46 — Data Structure Implementation and Analysis</span>
-							<span class="courseDescription">Crumble tree, Graph Algorithm, Hash table, Skip list, BST, Sorting</span>
-						</div>
-						<div class="courseCard">
-							<span class="courseTitle">COMPSCI 121 — Information Retrieval (<a href="https://github.com/stevenguyukai/IR24W-A3-G42" style="text-decoration: underline;">Link</a>)</span>
-							<span class="courseDescription">Built a complete search engine from the ground up</span>
-						</div>
-						<div class="courseCard">
-							<span class="courseTitle">COMPSCI 147 — Internet of Things (IoT) Software and Systems</span>
-							<span class="courseDescription">Built a door locking system which understand knocking patterns</span>
-						</div>
-						<div class="courseCard">
-							<span class="courseTitle">COMPSCI 171 — Introduction to Artificial Intelligence (<a href="https://github.com/stevenguyukai/CS171_Sudoku/tree/Yukai" style="text-decoration: underline;">Link</a>)</span>
-							<span class="courseDescription">Implement Heuristic algorithms to solve monster sudoku boards</span>
-						</div>
-						<div class="courseCard">
-							<span class="courseTitle">COMPSCI 116 — Computational Photography and Vision</span>
-							<span class="courseDescription">Blending, Reconstruct HDR and Anti-pinhole image, Image stitching</span>
-						</div>
-					</div>
-				</div>
-			</div>
+			<!-- Work -->
+			<div id="workArea">
+			  	<span id="workText">
+				  	<span style="color: #52b4ED">Work</span> Experience
+			  	</span>
+			  	<div id="workTimeline">
+				  	<!-- ITEM 1 -->
+				  	<div class="workItem current">
+					  	<div class="workDot"></div>
+					  	<div class="workContent">
+						  	<span class="workTitle">NEXTBYTE — Founder</span>
+						  	<span class="workTime">2025.09 – Present · Irvine, CA Remote</span>
+						  	<p class="workDesc">• Building E-Commerce platform and developing interesting apps</p>
+					  	</div>
+				  	</div>
+				  	<!-- ITEM 2 -->
+				  	<div class="workItemButtom">
+					  	<div class="workDot"></div>
+					  	<div class="workContent">
+						  	<span class="workTitle">Personable Inc. — Software Engineer</span>
+						  	<span class="workTime">2025.04 – 2025.09 · Fountain Valley, CA</span>
+						  	<p class="workDesc">• Improved the AI chatbot to handle very long context windows</p>
+							<p class="workDesc">• Optimized the ASR pipeline for 10+ hour audio files, improving speaker diarization and transcription quality</p>
+					  	</div>
+				  	</div>
+			  	</div>
+		  	</div>
 			<!-- Contact -->
 			<div>
 				<div id="contactArea">
@@ -299,39 +296,20 @@
 			</div>
 		</div>
 		<!-- Resume choice modal -->
-  <div id="resumeModalOverlay" onclick="overlayClick(event)">
-    <div id="resumeModalContainer" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
-      <button id="resumeModalClose" aria-label="Close" onclick="closeResumeModal()">×</button>
-      <div id="resumeModalHeader"><span id="resumeModalTitle">Choose a version to download</span></div>
-      <div id="resumeModalBody">
-        <p>Pick your preferred resume format:</p>
-      </div>
-      <div id="resumeModalActions">
-        <a class="homeButton" href="./img/resume_color.pdf" download="YukaiGu_Resume_Color.pdf">Color Version</a>
-        <a class="homeButton" href="./img/resume_print.pdf" download="YukaiGu_Resume_Print.pdf">Print‑friendly</a>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openResumeModal() {
-      document.getElementById('resumeModalOverlay').style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    }
-    function closeResumeModal() {
-      document.getElementById('resumeModalOverlay').style.display = 'none';
-      document.body.style.overflow = '';
-    }
-    function overlayClick(e) {
-      // Close only when clicking the dimmed area, not the modal itself
-      if (e.target && e.target.id === 'resumeModalOverlay') {
-        closeResumeModal();
-      }
-    }
-    // Close on Escape key
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape') closeResumeModal();
-    });
-  </script>
+	  	<div id="resumeModalOverlay" onclick="overlayClick(event)">
+			<div id="resumeModalContainer" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+				<button id="resumeModalClose" aria-label="Close" onclick="closeResumeModal()">×</button>
+				<div id="resumeModalHeader">
+					<span id="resumeModalTitle">Choose a version to download</span>
+				</div>
+				<div id="resumeModalBody">
+					<p>Pick your preferred resume format:</p>
+		  		</div>
+				<div id="resumeModalActions">
+					<a class="homeButton" href="./img/resume_color.pdf" download="YukaiGu_Resume_Color.pdf">Color Version</a>
+					<a class="homeButton" href="./img/resume_print.pdf" download="YukaiGu_Resume_Print.pdf">Print‑friendly</a>
+				</div>
+			</div>
+	  	</div>
 	</body>
 </html>
