@@ -536,11 +536,6 @@ body {
 	vertical-align: middle;
 }
 
-/* 移动端：缩小一下左右留白，避免贴边 */
-@media (max-width: 768px){
-	.workItem.current .workContent::before{ left: -12px; right: -12px; }
-}
-
 .workTitle {
 	display: block;
 	font-weight: 800;
@@ -558,15 +553,6 @@ body {
 .workDesc {
 	margin: 0;
 	line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-	#workArea { margin-top: 6vh; }
-	#workTimeline { padding-left: 22px; width: 92%; margin: 0 auto; }
-	#workTimeline:before { left: 8px; transform: none; }
-	#workTimeline::after { left: 8px; transform: none; }
-	.workDot { left: -2px; }
-	.workContent { margin-left: 22px; }
 }
 
 #workArea{
@@ -1061,6 +1047,151 @@ body {
 		display: flex;
 	}
 
+	/* Work section */
+	#workText {
+		text-align: center;
+		font-family: 'Nunito', sans-serif;
+		font-weight: 800;
+		--progress: 0;
+		scale: var(--progress);
+		font-size: 8vw;
+		letter-spacing: 3px;
+		color: var(--main-white);
+	}
+
+	#workTimeline {
+		position: relative;
+		width: 92%;
+		margin: 0 auto;
+	}
+
+	#workTimeline:before {
+		content: "";
+		position: absolute;
+		transform: translateX(-1px);
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: rgba(255,255,255,0.18);
+		left: 10px;
+	}
+	#workTimeline::after {
+		content: "";
+		position: absolute;
+		transform: translateX(-1px);
+		top: 0;
+		width: 2px;
+		--lineProgress: 0;
+		height: var(--lineProgress, 0%);
+		background: #52b4ED;
+		box-shadow: 0 0 0 1px rgba(82,180,237,0.35);
+		pointer-events: none;
+		left: 10px;
+	}
+
+	.workItem {
+		position: relative;
+		margin: 0 0 70px 0;
+		width: 100%;
+	}
+
+	.workItemButtom {
+		position: relative;
+		margin: 0 0 0 0;
+		width: 100%;
+	}
+
+	.workDot {
+		position: absolute;
+		left: calc(10px - 6px);
+		top: 6px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #52b4ED;
+		box-shadow: 0 0 0 4px rgba(82,180,237,0.25);
+	}
+
+	.workContent {
+		margin-left: 60px;
+		color: #e5e7eb;
+		font-family: 'Nunito', sans-serif;
+		transition: opacity .35s ease, transform .35s ease;
+		will-change: opacity, transform;
+		position: relative;
+		width: 80%;
+	}
+
+	/* 当前工作的卡片式高亮（半透明底 + 发光阴影） */
+	.workItem.current .workContent::before{
+		content: "";
+		position: absolute;
+		left: -16px;
+		right: -16px;
+		top: -8px;
+		bottom: -8px;
+		background: rgba(82,180,237,0.08);                   /* 蓝色淡背景 */
+		border: 1px solid rgba(82,180,237,0.25);             /* 细边框 */
+		box-shadow: 0 8px 24px rgba(82,180,237,0.25),        /* 外发光 */
+		inset 0 0 24px rgba(82,180,237,0.12);    /* 内发光 */
+		border-radius: 12px;
+		z-index: -1;                                         /* 在文字后面 */
+	}
+
+	/* 当前项的时间线圆点更显眼（换金色 + 更大柔光） */
+	.workItem.current .workDot{
+		background: #F7D164;
+		box-shadow: 0 0 0 5px rgba(247,209,100,0.28);
+	}
+
+	/* 标题后加一个 CURRENT 徽标（可按需删掉） */
+	.workItem.current .workTitle::after{
+		content: "CURRENT";
+		margin-left: 8px;
+		font-size: 0.75rem;
+		font-weight: 800;
+		letter-spacing: .6px;
+		padding: 2px 8px;
+		border-radius: 9999px;
+		background: #52b4ED;
+		color: #0D1D2D;
+		vertical-align: middle;
+	}
+
+	.workTitle {
+		display: block;
+		font-weight: 800;
+		color: #ffffff;
+		margin-bottom: 2px;
+	}
+
+	.workTime {
+		display: block;
+		font-size: 0.95rem;
+		color: #9CA3AF;
+		margin-bottom: 12px;
+	}
+
+	.workDesc {
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	#workArea{
+		width: 100vw;
+		min-height: 100vh;
+		position: absolute;
+		top: 300vh;
+		overflow: visible;
+		background-color: var(--main-dark);
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 24px;
+		scroll-margin-top: 12vh;
+	}
 }
 
 
