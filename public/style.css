@@ -999,3 +999,13 @@ body {
     from { transform: scale(2); }
     to { transform: scale(1); }
 }
+
+/* Simple modal overlay */
+#resumeModalOverlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 9999; }
+#resumeModalContainer { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #111827; color: #fff; width: min(92vw, 520px); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+#resumeModalHeader { padding: 18px 22px; border-bottom: 1px solid rgba(255,255,255,0.08); font-weight: 800; font-family: 'Nunito', sans-serif; letter-spacing: .3px; }
+#resumeModalBody { padding: 18px 22px; line-height: 1.5; font-family: 'Nunito', sans-serif; }
+#resumeModalActions { display: flex; gap: 12px; padding: 0 22px 22px; }
+#resumeModalActions a, #resumeModalActions button { flex: 1 1 0; }
+#resumeModalClose { position: absolute; right: 12px; top: 10px; background: transparent; border: none; font-size: 24px; color: #9CA3AF; cursor: pointer; }
+#resumeModalClose:hover { color: #ffffff; }
