@@ -39,7 +39,7 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 8vh;
-	background-color: rgba(var(--main-dark), 0.7);
+	background-color: rgba(13, 29, 45, 0.7);
 	-webkit-backdrop-filter: blur(25px);
 	backdrop-filter: blur(25px);
 	top: 0;
@@ -60,7 +60,7 @@ body {
 
 #headName {
 	color: var(--main-white);
-	margin-left: 2vw; 
+	margin-left: 2vw;
 	font-size: 4vh;
 	font-weight: 800;
 	font-family: 'Nunito', sans-serif;
@@ -105,8 +105,8 @@ body {
 	height: 92vh;
 	width: 92%;
 	display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #homeDescription{
@@ -115,7 +115,7 @@ body {
 	z-index: 5;
 	display: flex;
     justify-content: center;
-	flex-direction: column; 
+	flex-direction: column;
 }
 
 
@@ -177,7 +177,7 @@ body {
 	height: 60vh;
 	display: flex;
     justify-content: center;
-	flex-direction: column; 
+	flex-direction: column;
 	position: relative;
 	right: 3vw;
 }
@@ -196,7 +196,7 @@ body {
 .triangle {
     width: 0;
     height: 0;
-    border-left: 18vw solid transparent; 
+    border-left: 18vw solid transparent;
     border-right: 18vw solid transparent;
     border-bottom: 30vw solid var(--main-middle);
     position: relative;
@@ -211,12 +211,12 @@ body {
   .triangle::after {
     content: '';
     position: relative;
-    top: 2.5vw; 
-    left: -13.8vw; 
+    top: 2.5vw;
+    left: -13.8vw;
     width: 0;
     height: 0;
-    border-left: 13.8vw solid transparent; 
-    border-right: 13.8vw solid transparent; 
+    border-left: 13.8vw solid transparent;
+    border-right: 13.8vw solid transparent;
     border-bottom: 24vw solid var(--main-dark);
 	z-index: 1;
   }
@@ -425,53 +425,164 @@ body {
 	color: var(--main-white);
 }
 
-#courseArea{
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	top: 300vh;
-	overflow: hidden;
-	background-color: var(--main-dark);
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}
-
-#courseText{
-	position: relative;
-	font-size: 5vw;
-	font-weight: 800;
+/* Work section */
+#workText {
+	text-align: center;
 	font-family: 'Nunito', sans-serif;
+	font-weight: 800;
+	--progress: 0;
+	scale: var(--progress);
+	font-size: 5vw;
 	letter-spacing: 3px;
 	color: var(--main-white);
-	top: 18%;
-	--progress: 0;
-	scale: var(--progress)
 }
 
-#courseBox{
-	width: 90%;
-	height: 60%;
+#workTimeline {
 	position: relative;
-	top: 10%;
+	width: 92%;
+	margin: 0 auto;
+}
+
+#workTimeline:before {
+	content: "";
+	position: absolute;
+	left: 23%;
+	transform: translateX(-1px);
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: rgba(255,255,255,0.18);
+}
+#workTimeline::after {
+  	content: "";
+  	position: absolute;
+  	left: 23%;
+  	transform: translateX(-1px);
+  	top: 0;
+  	width: 2px;
+	--lineProgress: 0;
+  	height: var(--lineProgress, 0%);
+  	background: #52b4ED;
+  	box-shadow: 0 0 0 1px rgba(82,180,237,0.35);
+  	pointer-events: none;
+}
+
+.workItem {
+	position: relative;
+	margin: 0 0 70px 0;
+	width: 100%;
+}
+
+.workItemButtom {
+	position: relative;
+	margin: 0 0 0 0;
+	width: 100%;
+}
+
+.workDot {
+	position: absolute;
+	left: calc(23% - 6px);
+	top: 6px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #52b4ED;
+	box-shadow: 0 0 0 4px rgba(82,180,237,0.25);
+}
+
+.workContent {
+	margin-left: calc(25% + 22px);
+	color: #e5e7eb;
+	font-family: 'Nunito', sans-serif;
+	transition: opacity .35s ease, transform .35s ease;
+	will-change: opacity, transform;
+	position: relative;
+	width: 50%;
+}
+
+/* 当前工作的卡片式高亮（半透明底 + 发光阴影） */
+.workItem.current .workContent::before{
+	content: "";
+	position: absolute;
+	left: -16px;
+	right: -16px;
+	top: -8px;
+	bottom: -8px;
+	background: rgba(82,180,237,0.08);                   /* 蓝色淡背景 */
+	border: 1px solid rgba(82,180,237,0.25);             /* 细边框 */
+	box-shadow: 0 8px 24px rgba(82,180,237,0.25),        /* 外发光 */
+	inset 0 0 24px rgba(82,180,237,0.12);    /* 内发光 */
+	border-radius: 12px;
+	z-index: -1;                                         /* 在文字后面 */
+}
+
+/* 当前项的时间线圆点更显眼（换金色 + 更大柔光） */
+.workItem.current .workDot{
+	background: #F7D164;
+	box-shadow: 0 0 0 5px rgba(247,209,100,0.28);
+}
+
+/* 标题后加一个 CURRENT 徽标（可按需删掉） */
+.workItem.current .workTitle::after{
+	content: "CURRENT";
+	margin-left: 8px;
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: .6px;
+	padding: 2px 8px;
+	border-radius: 9999px;
+	background: #52b4ED;
+	color: #0D1D2D;
+	vertical-align: middle;
+}
+
+/* 移动端：缩小一下左右留白，避免贴边 */
+@media (max-width: 768px){
+	.workItem.current .workContent::before{ left: -12px; right: -12px; }
+}
+
+.workTitle {
+	display: block;
+	font-weight: 800;
+	color: #ffffff;
+	margin-bottom: 2px;
+}
+
+.workTime {
+	display: block;
+	font-size: 0.95rem;
+	color: #9CA3AF;
+	margin-bottom: 12px;
+}
+
+.workDesc {
+	margin: 0;
+	line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+	#workArea { margin-top: 6vh; }
+	#workTimeline { padding-left: 22px; width: 92%; margin: 0 auto; }
+	#workTimeline:before { left: 8px; transform: none; }
+	#workTimeline::after { left: 8px; transform: none; }
+	.workDot { left: -2px; }
+	.workContent { margin-left: 22px; }
+}
+
+#workArea{
+	width: 100vw;
+	min-height: 100vh;
+	position: absolute;
+	top: 300vh;
+	overflow: visible;
+	background-color: var(--main-dark);
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-}
-
-.courseCard{
-	width: 90%;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	overflow: hidden;
-	--progress: 0;
-	opacity: calc(var(--progress));
+	align-items: center;
+	gap: 24px;
+	scroll-margin-top: 12vh;
 }
 
 .courseTitle{
@@ -561,7 +672,7 @@ body {
 	}
 	#headName {
 		color: var(--main-white);
-		margin-left: 4vw; 
+		margin-left: 4vw;
 		font-size: 3vh;
 		font-weight: 800;
 		font-family: 'Nunito', sans-serif;
@@ -586,8 +697,8 @@ body {
 	}
 
 	#extentButtonPic2 {
-		width: 60%; 
-		height: 60%; 
+		width: 60%;
+		height: 60%;
 		left: 20%;
 		top: 20%;
 		position: absolute;
@@ -625,8 +736,8 @@ body {
 		width: 90%;
 		display: flex;
 		flex-direction: column;
-		align-items: center; 
-		justify-content: space-evenly; 
+		align-items: center;
+		justify-content: space-evenly;
 	}
 
 	#navItemsMobile {
@@ -640,7 +751,7 @@ body {
 		order: 2;
 		display: flex;
 		justify-content: center;
-		flex-direction: column; 
+		flex-direction: column;
 	}
 
 	#greetingText {
@@ -662,7 +773,7 @@ body {
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 3px;
 	}
-	
+
 	#personalDescription {
 		position: relative;
 		font-size: 7vw;
@@ -693,7 +804,7 @@ body {
 		height: 40vh;
 		display: flex;
 		justify-content: center;
-		flex-direction: column; 
+		flex-direction: column;
 		position: relative;
 		left: 10%;
 		order: 1;
@@ -712,7 +823,7 @@ body {
 	.triangle {
 		width: 0;
 		height: 0;
-		border-left: 36vw solid transparent; 
+		border-left: 36vw solid transparent;
 		border-right: 36vw solid transparent;
 		border-bottom: 60vw solid var(--main-middle);
 		position: relative;
@@ -734,7 +845,7 @@ body {
 		width: 0;
 		height: 0;
 		border-left: 27.6vw solid transparent;
-		border-right: 27.6vw solid transparent; 
+		border-right: 27.6vw solid transparent;
 		border-bottom: 48vw solid var(--main-dark);
 		z-index: 1;
 	  }
@@ -982,7 +1093,7 @@ body {
 
 @keyframes slideInFromBottom {
     from { transform: translateY(100%); }
-    to { transform: translateX(0); }
+    to { transform: translateY(0); }
 }
 
 @keyframes slideOutToRight {
