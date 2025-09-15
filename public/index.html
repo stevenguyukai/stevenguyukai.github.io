@@ -112,11 +112,9 @@
 					Contact
 				</span>
 			</a>
-			<a href="./img/resume.pdf" download="YukaiGu_Resume.pdf">
-				<button class="homeButton" style="width: 100%;height: 100%;font-size: 3vh;">
-					Download Resume
-				</button>
-			</a>
+			<button class="homeButton" style="width: 100%;height: 100%;font-size: 3vh;" onclick="openResumeModal()">
+				Download Resume
+			</button>
 			<br>
 			<br>
 		</div>
@@ -142,11 +140,9 @@
 					<br>
 					<br>
 					<div id="homeButtonArea">
-						<a href="./img/resume.pdf" download="YukaiGu_Resume.pdf" style="width: 45%;height: 100%;">
-							<button class="homeButton" style="width: 100%;height: 100%;">
-								Download Resume
-							</button>
-						</a>
+						<button class="homeButton" onclick="openResumeModal()" style="width: 45%;height: 100%;">
+							Download Resume
+						</button>
 						<button class="homeButton" onclick="contactBtn()">
 							Contact
 						</button>
@@ -302,5 +298,40 @@
 				</div>
 			</div>
 		</div>
+		<!-- Resume choice modal -->
+  <div id="resumeModalOverlay" onclick="overlayClick(event)">
+    <div id="resumeModalContainer" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+      <button id="resumeModalClose" aria-label="Close" onclick="closeResumeModal()">×</button>
+      <div id="resumeModalHeader"><span id="resumeModalTitle">Choose a version to download</span></div>
+      <div id="resumeModalBody">
+        <p>Pick your preferred resume format:</p>
+      </div>
+      <div id="resumeModalActions">
+        <a class="homeButton" href="./img/resume_color.pdf" download="YukaiGu_Resume_Color.pdf">Color Version</a>
+        <a class="homeButton" href="./img/resume_print.pdf" download="YukaiGu_Resume_Print.pdf">Print‑friendly</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openResumeModal() {
+      document.getElementById('resumeModalOverlay').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeResumeModal() {
+      document.getElementById('resumeModalOverlay').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function overlayClick(e) {
+      // Close only when clicking the dimmed area, not the modal itself
+      if (e.target && e.target.id === 'resumeModalOverlay') {
+        closeResumeModal();
+      }
+    }
+    // Close on Escape key
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeResumeModal();
+    });
+  </script>
 	</body>
 </html>
