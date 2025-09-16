@@ -1054,7 +1054,7 @@ body {
 		font-weight: 800;
 		--progress: 0;
 		scale: var(--progress);
-		font-size: 8vw;
+		font-size: 10vw;
 		letter-spacing: 3px;
 		color: var(--main-white);
 	}
@@ -1103,10 +1103,10 @@ body {
 
 	.workDot {
 		position: absolute;
-		left: calc(10px - 6px);
+		left: calc(10px - 10px);
 		top: 6px;
-		width: 12px;
-		height: 12px;
+		width: 20px;
+		height: 20px;
 		border-radius: 50%;
 		background: #52b4ED;
 		box-shadow: 0 0 0 4px rgba(82,180,237,0.25);
@@ -1162,12 +1162,13 @@ body {
 		display: block;
 		font-weight: 800;
 		color: #ffffff;
+		font-size: 1.5rem;
 		margin-bottom: 2px;
 	}
 
 	.workTime {
 		display: block;
-		font-size: 0.95rem;
+		font-size: 1.2rem;
 		color: #9CA3AF;
 		margin-bottom: 12px;
 	}
@@ -1175,6 +1176,7 @@ body {
 	.workDesc {
 		margin: 0;
 		line-height: 1.6;
+		font-size: 1.3rem;
 	}
 
 	#workArea{
