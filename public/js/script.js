@@ -182,26 +182,6 @@ function contactBtn(){
 	smoothScrollTo(wholeContentDiv, vhToPixels(400), 1000);
 }
 
-function directToProject1(){
-	window.open("https://antalmanac.com", "_blank");
-}
-
-function directToProject2(){
-	window.open("https://github.com/stevenguyukai/IEEE-MicroMouse", "_blank");
-}
-
-function directToProject3(){
-	window.open("http://stevenguyukai.github.io/PRO_Website", "_blank");
-}
-
-function directToProject4(){
-	window.open("https://github.com/stevenguyukai/IR24W-A3-G42", "_blank");
-}
-
-function directToProject5(){
-	window.open("https://pddpdd20020105.github.io/ICS-175-Group-6-Project/index.html", "_blank");
-}
-
 function directToGithub() {
 	window.open("https://github.com/stevenguyukai","_blank" );
 }
@@ -240,4 +220,70 @@ function overlayClick(e) {
 // Close on Escape key
 document.addEventListener('keydown', function(e){
 	if (e.key === 'Escape') closeResumeModal();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	// 1) 缓存 Modal 节点
+	const modal = document.getElementById('projectModal');
+	const modalImg = document.getElementById('projModalImg');
+	const modalTitle = document.getElementById('projModalTitle');
+	const modalDesc = document.getElementById('projModalDesc');
+	const modalLink = document.getElementById('projModalLink');
+	const modalCloseBtns = modal ? modal.querySelectorAll('.projModal__close, .projModal__close--secondary') : [];
+
+	const wholeContent = document.getElementById('wholeContent'); // 你的滚动容器
+
+	// 2) 事件委派：点击任何 .projectCard 打开弹窗
+	const projectsArea = document.getElementById('projectsArea');
+	if (projectsArea && modal) {
+		projectsArea.addEventListener('click', (e) => {
+			const card = e.target.closest('.projectCard');
+			if (!card) return;
+
+			const title = card.dataset.title || card.querySelector('.projectTitle')?.textContent?.trim() || '';
+			const desc  = card.dataset.desc  || '';
+			const img   = card.dataset.img   || card.querySelector('img')?.getAttribute('src') || '';
+			const link  = card.dataset.link  || '';
+
+			modalTitle.textContent = title;
+			modalDesc.textContent  = desc;
+			modalImg.src           = img;
+			modalImg.alt           = title ? (title + ' preview') : 'project image';
+
+			if (link) {
+				modalLink.href = link;
+				modalLink.style.display = '';
+			} else {
+				modalLink.removeAttribute('href');
+				modalLink.style.display = 'none';
+			}
+
+			modal.classList.add('is-open');
+			modal.setAttribute('aria-hidden', 'false');
+
+			// 锁定背景滚动（你的页面用 wholeContent 滚动）
+			if (wholeContent) wholeContent.style.overflow = 'hidden';
+
+			// 可选：把焦点放到关闭按钮上，便于键盘操作
+			modal.querySelector('.projModal__close')?.focus();
+		});
+	}
+
+	// 3) 关闭弹窗（按钮、遮罩、ESC）
+	function closeModal(){
+		if (!modal) return;
+		modal.classList.remove('is-open');
+		modal.setAttribute('aria-hidden', 'true');
+		if (wholeContent) wholeContent.style.overflow = ''; // 恢复滚动
+	}
+
+	modalCloseBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+	modal?.addEventListener('click', (e) => {
+		if (e.target === modal) closeModal(); // 点击遮罩关闭
+	});
+
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && modal?.classList.contains('is-open')) closeModal();
+	});
 });
