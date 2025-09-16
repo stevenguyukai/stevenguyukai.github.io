@@ -209,39 +209,72 @@
 					Latest <span style="color: #52b4ED">Projects</span>
 				</span>
 				<div id="projectBox">
-					<div class="projectCard" onclick="directToProject5()">
+					<!-- HANABI AI -->
+					<div class="projectCard"
+						 data-title="HANABI AI"
+						 data-desc="• Reinforcement learning agents for cooperative card game Hanabi
+						 • Implements MAPPO and communication strategies"
+						 data-img="img/hanabi.jpg">
 						<div class="projectImg">
-							<img src="img/hanabi.jpg" style="height: 100%;width: 100%;object-fit: cover;" alt="HANABI AI">
+							<img src="img/hanabi.jpg" style="object-position: center top" alt="HANABI AI cover">
 						</div>
 						<span class="projectTitle">HANABI AI</span>
 					</div>
-					<div class="projectCard">
+					<!-- 3D Reconstruction -->
+					<div class="projectCard"
+						 data-title="3D Reconstruction"
+						 data-desc="• Utilized structured light techniques with two cameras and a projector to reconstruct objects into detailed 3D models
+						 • Built color 3D models from 430 images (roadster, mannequin, teapot)"
+						 data-img="img/3d_reconstruction.png">
 						<div class="projectImg">
-							<img src="img/3d_reconstruction.png" style="height: 100%;width: 100%;object-fit: cover;" alt="3D Reconstruction">
+							<img src="img/3d_reconstruction.png" style="height: 100%;width: 100%;object-fit: cover; object-position: center"  alt="3D Reconstruction">
 						</div>
 						<span class="projectTitle">3D Reconstruction</span>
 					</div>
-					<div class="projectCard" onclick="directToProject1()">
+					<!-- AntAlmanac -->
+					<div class="projectCard"
+						 data-title="AntAlmanac"
+						 data-desc="• Contributed to AntAlmanac, UCI’s open-source course scheduling platform used by thousands of students each year
+						 • Shipped new planner/scheduling features and resolved high-impact bugs; streamlined key flows to reduce user friction and improve reliability"
+						 data-link="https://antalmanac.com"
+						 data-img="img/antalmanac.png">
 						<div class="projectImg">
-							<img src="img/antalmanac.png" style="height: 100%;width: 100%;object-fit: cover;" alt="AntAlmanac">
+							<img src="img/antalmanac.png" style="height: 100%;width: 100%;object-fit: cover;object-position: center" alt="AntAlmanac">
 						</div>
 						<span class="projectTitle">AntAlmanac</span>
 					</div>
-					<div class="projectCard" onclick="directToProject2()">
+					<!-- Micro Mouse -->
+					<div class="projectCard"
+						 data-title="Micro Mouse"
+						 data-desc="• Designed Micro-Mouse robot and its maze-solving algorithm
+						 • Implemented the project using C/C++ on STM32 microcontroller, with flood-fill algorithm for maze navigation"
+						 data-link="https://github.com/stevenguyukai/IEEE-MicroMouse"
+						 data-img="img/IEEE_MM.png">
 						<div class="projectImg">
-							<img src="img/IEEE_MM.png" style="height: 100%;width: 100%;object-fit: cover;" alt="Micro Mouse">
+							<img src="img/IEEE_MM.png" style="height: 100%;width: 100%;object-fit: cover;object-position: center" alt="Micro Mouse">
 						</div>
 						<span class="projectTitle">Micro Mouse</span>
 					</div>
-					<div class="projectCard" onclick="directToProject3()">
+					<!-- P.R.O. Club -->
+					<div class="projectCard"
+						 data-title="P.R.O. Club"
+						 data-desc="• Founded and led a programming club focused on tech for social good; organized workshops, mentored project teams, and oversaw publication of technical articles and the club website
+						 • Released 4 puzzle games, published 76 original articles"
+						 data-link="http://stevenguyukai.github.io/PRO_Website"
+						 data-img="img/pro.png">
 						<div class="projectImg">
-							<img src="img/pro.png" style="height: 100%;width: 100%;object-fit: cover;" alt="PRO club">
+							<img src="img/pro.png" style="height: 100%;width: 100%;object-fit: cover;object-position: center" alt="PRO club">
 						</div>
 						<span class="projectTitle">P.R.O. Club</span>
 					</div>
-					<div class="projectCard" onclick="directToProject4()">
+					<!-- Search Engine -->
+					<div class="projectCard"
+						 data-title="Search Engine"
+						 data-desc="• Built a search engine from scratch with AI-generated summaries
+						 • Getting archive website data via web scraping and indexing with TF-IDF"
+						 data-img="img/searchEngine.png">
 						<div class="projectImg">
-							<img src="img/searchEngine.png" style="height: 100%;width: 100%;object-fit: cover;" alt="Search Engine">
+							<img src="img/searchEngine.png" style="height: 100%;width: 100%;object-fit: cover;object-position: center" alt="Search Engine">
 						</div>
 						<span class="projectTitle">Search Engine</span>
 					</div>
@@ -313,5 +346,27 @@
 				</div>
 			</div>
 	  	</div>
+
+		<!-- Projects Detail Modal -->
+		<div id="projectModal" class="projModal" aria-hidden="true" role="dialog" aria-labelledby="projModalTitle">
+			<div class="projModal__panel">
+				<button class="projModal__close" aria-label="Close">×</button>
+
+				<div class="projModal__media">
+					<!-- 用 picture 支持将来换高分图 -->
+					<img id="projModalImg" alt="popup image" src="">
+				</div>
+
+				<div class="projModal__body">
+					<h3 id="projModalTitle"></h3>
+					<p id="projModalDesc"></p>
+
+					<div class="projModal__actions">
+						<a id="projModalLink" class="homeButton" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;text-align: center;line-height: normal;vertical-align: middle;padding: 10px 20px;">Go to Project</a>
+						<button class="homeButton projModal__close--secondary">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

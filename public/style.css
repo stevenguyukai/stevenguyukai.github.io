@@ -253,6 +253,26 @@ body {
     transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
+@media (max-aspect-ratio: 1/1) {
+	.homeButton {
+		width: 35%;
+		border-radius: 20px;
+		background-color: var(--main-dark);
+		border-color: var(--main-middle);
+
+		font-family: 'Nunito', sans-serif;
+		letter-spacing: 2px;
+		font-weight: 600;
+		color: var(--main-white);
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 4.5vw;
+		cursor: pointer;
+		transition: background-color 0.5s ease, transform 0.5s ease;
+	}
+}
+
 .homeButton:hover {
     background-color: var(--main-middle);
 	color: var(--main-white);
@@ -1255,3 +1275,91 @@ body {
 #resumeModalActions a, #resumeModalActions button { flex: 1 1 0; }
 #resumeModalClose { position: absolute; right: 12px; top: 10px; background: transparent; border: none; font-size: 24px; color: #9CA3AF; cursor: pointer; }
 #resumeModalClose:hover { color: #ffffff; }
+
+
+/* === 卡片区域：固定 16:9，缩略图裁切填满 === */
+.projectImg {
+	aspect-ratio: 16 / 9;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 12px;
+}
+.projectImg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;         /* 列表中使用 cover，保证卡片整齐 */
+	object-position: center;   /* 可按需改成 top / 25% 之类聚焦 */
+	display: block;
+}
+
+/* 小的动效（可选） */
+.projectCard {
+	cursor: pointer;
+	transition: transform .2s ease, box-shadow .2s ease;
+}
+.projectCard:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 24px rgba(0,0,0,.25);
+}
+
+/* === 弹窗整体 === */
+.projModal {
+	position: fixed; inset: 0; display: none;
+	background: rgba(0,0,0,.55);
+	z-index: 9999;
+}
+.projModal.is-open { display: block; }
+.projModal__panel {
+	position: absolute; left: 50%; top: 50%;
+	transform: translate(-50%,-50%);
+	width: min(960px, 92vw);
+	background: #0f1b28; color: #fff;
+	border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,.5);
+	overflow: hidden;
+}
+.projModal__close {
+	position: absolute; right: 12px; top: 10px;
+	background: transparent; border: 0; color: #9CA3AF;
+	font-size: 28px; cursor: pointer;
+}
+.projModal__close:hover { color: #fff; }
+
+/* 媒体区：弹窗里展示完整图，contain + 居中，不裁切 */
+.projModal__media {
+	background: radial-gradient(80% 80% at 50% 50%, rgba(255,255,255,.06), rgba(255,255,255,.02) 60%, transparent 100%);
+	padding: 14px 14px 0 14px;
+}
+#projModalImg {
+	width: 100%;
+	max-height: 40vh;
+	object-fit: contain;        /* 关键点：在弹窗中展示完整图 */
+	object-position: center;
+	display: block;
+	border-radius: 12px;
+}
+
+/* 文本区 */
+.projModal__body { padding: 16px 20px 22px; }
+.projModal__body h3 {
+	margin: 0 0 6px; font-weight: 800; font-family: 'Nunito', sans-serif;
+}
+.projModal__body p {
+	margin: 0 0 14px; line-height: 1.6; color: #d1d5db;
+}
+.projModal__actions {
+	display: flex;
+	position: relative;
+	gap: 30px;
+	flex-wrap: wrap;
+	width: 90%;
+	left: 5%;
+}
+.projModal__actions .homeButton {
+	flex: 1 1 200px; text-align: center;
+}
+#projModalDesc { white-space: pre-line; }
+
+/* 小屏适配 */
+@media (max-aspect-ratio: 1/1) {
+	#projModalImg { max-height: 48vh; }
+}
