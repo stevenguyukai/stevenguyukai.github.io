@@ -446,7 +446,7 @@ body {
 #workTimeline:before {
 	content: "";
 	position: absolute;
-	left: 23%;
+	left: 20%;
 	transform: translateX(-1px);
 	top: 0;
 	bottom: 0;
@@ -456,7 +456,7 @@ body {
 #workTimeline::after {
   	content: "";
   	position: absolute;
-  	left: 23%;
+  	left: 20%;
   	transform: translateX(-1px);
   	top: 0;
   	width: 2px;
@@ -481,23 +481,23 @@ body {
 
 .workDot {
 	position: absolute;
-	left: calc(23% - 6px);
+	left: calc(20% - 8px);
 	top: 6px;
-	width: 12px;
-	height: 12px;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
 	background: #52b4ED;
 	box-shadow: 0 0 0 4px rgba(82,180,237,0.25);
 }
 
 .workContent {
-	margin-left: calc(25% + 22px);
+	margin-left: calc(22% + 22px);
 	color: #e5e7eb;
 	font-family: 'Nunito', sans-serif;
 	transition: opacity .35s ease, transform .35s ease;
 	will-change: opacity, transform;
 	position: relative;
-	width: 50%;
+	width: 55%;
 }
 
 /* 当前工作的卡片式高亮（半透明底 + 发光阴影） */
@@ -541,11 +541,12 @@ body {
 	font-weight: 800;
 	color: #ffffff;
 	margin-bottom: 2px;
+	font-size: 1.5rem;
 }
 
 .workTime {
 	display: block;
-	font-size: 0.95rem;
+	font-size: 1.2rem;
 	color: #9CA3AF;
 	margin-bottom: 12px;
 }
@@ -553,6 +554,7 @@ body {
 .workDesc {
 	margin: 0;
 	line-height: 1.6;
+	font-size: 1.3rem;
 }
 
 #workArea{
