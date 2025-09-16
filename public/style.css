@@ -1357,9 +1357,16 @@ body {
 .projModal__actions .homeButton {
 	flex: 1 1 200px; text-align: center;
 }
-#projModalDesc { white-space: pre-line; }
+#projModalDesc {
+	white-space: pre-line;
+	font-size: 1.2rem;
+}
 
 /* 小屏适配 */
 @media (max-aspect-ratio: 1/1) {
 	#projModalImg { max-height: 48vh; }
+	#projModalDesc {
+		white-space: pre-line;
+		font-size: 1.5rem;
+	}
 }
