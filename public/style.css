@@ -1362,11 +1362,20 @@ body {
 	font-size: 1.2rem;
 }
 
+#projModalTitle {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
 /* 小屏适配 */
 @media (max-aspect-ratio: 1/1) {
 	#projModalImg { max-height: 48vh; }
 	#projModalDesc {
 		white-space: pre-line;
 		font-size: 2rem;
+	}
+	#projModalTitle {
+		font-size: 2.3rem;
+		font-weight: bold;
 	}
 }
