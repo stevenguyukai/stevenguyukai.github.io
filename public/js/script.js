@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	wholeContentDiv.addEventListener('scroll', function() {
 
 
-		const vh = wholeContentDiv.scrollHeight / 1050;
+		const vh = wholeContentDiv.scrollHeight / 1260;
 		const scrolled = (wholeContentDiv.scrollTop + wholeContentDiv.clientHeight) / vh;
 
 		if (scrolled >= 105 && scrolled <= 315){
@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
 			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("rewardLink").style.color = "#EEEFF2"
+			document.getElementById("rewardLinkMobile").style.color = "#EEEFF2"
 		} else if (scrolled >= 315 && scrolled <= 525){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
 			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
@@ -30,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
 			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("rewardLink").style.color = "#EEEFF2"
+			document.getElementById("rewardLinkMobile").style.color = "#EEEFF2"
 		} else if (scrolled >= 525 && scrolled <= 735){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
 			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
@@ -41,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
 			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("rewardLink").style.color = "#EEEFF2"
+			document.getElementById("rewardLinkMobile").style.color = "#EEEFF2"
 		} else if (scrolled >= 735 && scrolled <= 945){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
 			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
@@ -52,7 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.getElementById("skillsLinkMobile").style.color = "#52b4ED"
 			document.getElementById("contactLink").style.color = "#EEEFF2"
 			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
-		} else if (scrolled >= 945 && scrolled <= 1050){
+			document.getElementById("rewardLink").style.color = "#EEEFF2"
+			document.getElementById("rewardLinkMobile").style.color = "#EEEFF2"
+		} else if (scrolled >= 945 && scrolled <= 1055){
 			document.getElementById("homeLink").style.color = "#EEEFF2"
 			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("educationLink").style.color = "#EEEFF2"
@@ -61,6 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.getElementById("projectsLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("skillsLink").style.color = "#EEEFF2"
 			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("rewardLink").style.color = "#52b4ED"
+			document.getElementById("rewardLinkMobile").style.color = "#52b4ED"
+			document.getElementById("contactLink").style.color = "#EEEFF2"
+			document.getElementById("contactLinkMobile").style.color = "#EEEFF2"
+		} else if (scrolled >= 1055 && scrolled <= 1265){
+			document.getElementById("homeLink").style.color = "#EEEFF2"
+			document.getElementById("homeLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("educationLink").style.color = "#EEEFF2"
+			document.getElementById("educationLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("projectsLink").style.color = "#EEEFF2"
+			document.getElementById("projectsLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("skillsLink").style.color = "#EEEFF2"
+			document.getElementById("skillsLinkMobile").style.color = "#EEEFF2"
+			document.getElementById("rewardLink").style.color = "#EEEFF2"
+			document.getElementById("rewardLinkMobile").style.color = "#EEEFF2"
 			document.getElementById("contactLink").style.color = "#52b4ED"
 			document.getElementById("contactLinkMobile").style.color = "#52b4ED"
 		}
@@ -82,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			for (let i = 0; i < courseCards.length; i++) {
 				courseCards[i].style.setProperty("--progress", (scrolled - 630) / 210)
 			}
+		} else if (scrolled >= 840 && scrolled <= 1050){
+			document.getElementById("rewardText").style.setProperty("--progress", (scrolled - 840) / 210)
 		}
 	});
 });
@@ -178,8 +203,11 @@ function educationBtn(){
 function workBtn(){
 	smoothScrollTo(wholeContentDiv, vhToPixels(300), 1000);
 }
-function contactBtn(){
+function rewardBtn() {
 	smoothScrollTo(wholeContentDiv, vhToPixels(400), 1000);
+}
+function contactBtn(){
+	smoothScrollTo(wholeContentDiv, vhToPixels(500), 1000);
 }
 
 function directToGithub() {
